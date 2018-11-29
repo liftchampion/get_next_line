@@ -31,6 +31,8 @@ int					ft_memcmp(const void *s1, const void *s2, size_t len);
 
 size_t				ft_strlen(char const *s);
 
+int					ft_numlen(int num);
+
 char				*ft_strdup(const char *src);
 
 char				*ft_strcpy(char *dest, const char *src);
