@@ -57,27 +57,27 @@ include CMakeFiles/getNextLine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/getNextLine.dir/flags.make
 
-CMakeFiles/getNextLine.dir/main.c.o: CMakeFiles/getNextLine.dir/flags.make
-CMakeFiles/getNextLine.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/getNextLine.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/main.c.o   -c /Users/ggerardy/CLION/getNextLine/main.c
+CMakeFiles/getNextLine.dir/get_next_line.c.o: CMakeFiles/getNextLine.dir/flags.make
+CMakeFiles/getNextLine.dir/get_next_line.c.o: ../get_next_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/getNextLine.dir/get_next_line.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/get_next_line.c.o   -c /Users/ggerardy/CLION/getNextLine/get_next_line.c
 
-CMakeFiles/getNextLine.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/getNextLine.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggerardy/CLION/getNextLine/main.c > CMakeFiles/getNextLine.dir/main.c.i
+CMakeFiles/getNextLine.dir/get_next_line.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/getNextLine.dir/get_next_line.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggerardy/CLION/getNextLine/get_next_line.c > CMakeFiles/getNextLine.dir/get_next_line.c.i
 
-CMakeFiles/getNextLine.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/main.c -o CMakeFiles/getNextLine.dir/main.c.s
+CMakeFiles/getNextLine.dir/get_next_line.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/get_next_line.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/get_next_line.c -o CMakeFiles/getNextLine.dir/get_next_line.c.s
 
 # Object files for target getNextLine
 getNextLine_OBJECTS = \
-"CMakeFiles/getNextLine.dir/main.c.o"
+"CMakeFiles/getNextLine.dir/get_next_line.c.o"
 
 # External object files for target getNextLine
 getNextLine_EXTERNAL_OBJECTS =
 
-getNextLine: CMakeFiles/getNextLine.dir/main.c.o
+getNextLine: CMakeFiles/getNextLine.dir/get_next_line.c.o
 getNextLine: CMakeFiles/getNextLine.dir/build.make
 getNextLine: CMakeFiles/getNextLine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable getNextLine"

@@ -3,6 +3,9 @@
 
 # define BUFF_SIZE 50
 
+#include<string.h>
+#include<unistd.h>
+
 typedef struct
 {
 	int		fd;
@@ -19,5 +22,7 @@ typedef enum {
 	ENDL_GOT,
 	JUST_INITIALIZED = -777
 } t_result;
+
+int		get_next_line(const int fd, char **line);
 
 #endif

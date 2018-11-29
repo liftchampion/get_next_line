@@ -1,0 +1,35 @@
+#include "get_next_line.h"
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+int		main(void)
+{
+	char *line;
+	int ret;
+	line = (char*)malloc(10);
+	for (int i = 0; i < 9; i++)
+	{
+		line[i] = 'A';
+	}
+	line[9] = 0;
+
+	int fd1 = open("file1", O_RDONLY);
+	int fd2 = open("1.txt", O_RDONLY);
+	int fd3 = open("empty_strs", O_RDONLY);
+
+	ret = 1;
+	while (ret)
+	{
+		ret = get_next_line(fd2, &line);
+		printf("\n%d->%d: <%s>", fd2, ret, line);
+		ret = get_next_line(fd3, &line);
+		printf("\n%d->%d: <%s>", fd3, ret, line);
+		ret = get_next_line(fd1, &line);
+		printf("\n%d->%d: <%s>", fd1, ret, line);
+	}
+
+	return (0);
+}
+

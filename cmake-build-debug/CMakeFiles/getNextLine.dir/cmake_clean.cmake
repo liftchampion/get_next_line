@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/getNextLine.dir/main.c.o"
+  "CMakeFiles/getNextLine.dir/get_next_line.c.o"
   "getNextLine.pdb"
   "getNextLine"
 )
