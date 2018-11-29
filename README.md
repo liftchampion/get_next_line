@@ -1,2 +1,0 @@
-# getNextLine_42
-

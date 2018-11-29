@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ggerardy/CLION/getNextLine/libft.h
+string.h
+-
+
+/Users/ggerardy/CLION/getNextLine/main.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+libft.h
+/Users/ggerardy/CLION/getNextLine/libft.h
+stdarg.h
+-
+
