@@ -4,13 +4,13 @@
 #include <fcntl.h>
 #include "libft.h"
 
-#define BUFF_SIZE 10
+#define BUFF_SIZE 1
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <stdarg.h>
 
-#define DEBUG_ON 1
+#define DEBUG_ON 0
 
 #define RED "\x1B[31m"
 #define GREEN "\x1B[32m"
@@ -155,8 +155,6 @@ char** ft_get_vars_names(char *file, int line)
 		printf(WHITE);
 		return 0;
 	}
-	//ft_print_words_table((const char**)vars);
-	//DEBUG("%s %d %c", str, i, b);
 	return vars;
 }
 
@@ -173,6 +171,7 @@ typedef struct
 
 typedef enum {
 	MALLOC_ERROR,
+	NO_LINE,
 	ENDL_NOT_FOUND,
 	ENDL_GOT
 } t_result;
@@ -203,15 +202,14 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 
 	i = 0;
 	DEBUG("%d", buf->pos);
-	while (buf->buffer[buf->pos + i] && buf->buffer[buf->pos + i] != '\n' &&
-														i < buf->len)
+	while (buf->pos + i < buf->len && buf->buffer[buf->pos + i] != '\n')
 		i++;
 	*line = ft_strsub(buf->buffer, (unsigned int)buf->pos, (size_t)i);
 	if (!*line)
 		return (MALLOC_ERROR);
 	buf->pos += i;
 	DEBUG("new part is %s", *line);
-	DEBUG("%d", buf->pos);
+	DEBUG("%d %d", buf->pos, i);
 	if (buf->buffer[buf->pos] == '\n')
 	{
 		if (buf->pos != buf->len)
@@ -221,6 +219,11 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 		DEBUG("%d", buf->pos);
 		DEBUG("ENDL_GOT %s", buf->buffer);
 		return (ENDL_GOT);
+	}
+	if (i == 0)
+	{
+		DEBUG("NO_LINE");
+		return (NO_LINE);
 	}
 	DEBUG("ENDL_NOT_FOUND %s", buf->buffer);
 	return (ENDL_NOT_FOUND);
@@ -251,7 +254,6 @@ t_result ft_append_line(t_buf *buf, char **line)
 		free(*line);
 		*line = tmp;
 	}
-	//DEBUG("line is %s", *line);
 	return (ENDL_GOT);
 }
 
@@ -279,8 +281,8 @@ int		get_next_line(const int fd, char **line)
 	DEBUG("total line is %s", *line);
 	if (res == MALLOC_ERROR)
 		return (0);
-	if (res == ENDL_GOT)
-		return (1);
+	if (res == ENDL_GOT || res == NO_LINE)
+		return (res == ENDL_GOT ? 1 : 0);
 	return (0);
 }
 
@@ -296,78 +298,12 @@ int		main(void)
 	line[9] = 0;
 	int fd = open("file1", O_RDONLY);
 
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
+	ret = 1;
+	while (ret)
 	{
-		printf("<%c> ", line[i]);
+		ret = get_next_line(fd, &line);
+		printf("\n%d: <%s>", ret, line);
 	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
-
-	ret = get_next_line(fd, &line);
-	printf("\n");
-	for (int i = 0; i < 10; i++)
-	{
-		printf("<%c> ", line[i]);
-	}
-	printf("\n%d: <%s>", ret, line);
-
 
 	return (0);
 }
