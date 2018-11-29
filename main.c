@@ -4,13 +4,15 @@
 #include <fcntl.h>
 #include "libft.h"
 
-#define BUFF_SIZE 20
+#define BUFF_SIZE 50
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <stdarg.h>
 
-#define DEBUG_ON 1
+#define DEBUG_ON 0
+
+#define PRINT_INDEXES 0
 
 #define RED "\x1B[1m\x1B[31m"
 #define GREEN "\x1B[1m\x1B[32m"
@@ -87,7 +89,10 @@ void ft_print_str_debug(char *str)
 	while (str[i])
 	{
 		ft_print_char_debug(str[i]);
-		ft_print_index_superscript(i, pows);
+		if (PRINT_INDEXES)
+		{
+			ft_print_index_superscript(i, pows);
+		}
 		fprintf(DEBUG_STREAM, BLUE);
 		i++;
 	}
@@ -202,7 +207,8 @@ typedef enum {
 	MALLOC_ERROR,
 	NO_LINE,
 	ENDL_NOT_FOUND,
-	ENDL_GOT
+	ENDL_GOT,
+	JUST_INITIALIZED = -777
 } t_result;
 
 
@@ -239,7 +245,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 	buf->pos += i;
 	DEBUG("new part is %s", *line);
 	DEBUG("%d %d", buf->pos, i);
-	if (i == 0 && buf->len != buf->capacity)
+	if (i == 0 && buf->pos == buf->len && buf->len != buf->capacity)
 	{
 		DEBUG("NO_LINE");
 		return (NO_LINE);
@@ -289,24 +295,30 @@ t_result ft_append_line(t_buf *buf, char **line)
 int		get_next_line(const int fd, char **line)
 {
 	t_result res;
+	static t_buf buffers[11001] = {(t_buf){JUST_INITIALIZED, 0, 0, 0, 0}};
+	int i;
 
-	static t_buf buf = (t_buf){-1, 0, BUFF_SIZE, BUFF_SIZE, BUFF_SIZE};
-	if (buf.buffer == 0)
+	i = -1;
+	if (buffers[0].fd == JUST_INITIALIZED)
+		while (++i < 11001)
+			buffers[i] = (t_buf){i - 1, 0, BUFF_SIZE, BUFF_SIZE, BUFF_SIZE};
+
+	if (buffers[fd + 1].buffer == 0)
 	{
-		DEBUG("mallocing buffer");
-		if (!(buf.buffer = (char*)malloc(buf.capacity + 1)))
+		DEBUG("mallocing buffer %d", fd);
+		if (!(buffers[fd + 1].buffer = (char*)malloc(buffers[fd + 1].capacity + 1)))
 			return (0);
-		buf.fd = fd;
-		(buf.buffer)[buf.capacity] = 0;
-		ft_readn(fd, &buf);
+		buffers[fd + 1].fd = fd;
+		(buffers[fd + 1].buffer)[buffers[fd + 1].capacity] = 0;
+		ft_readn(fd, &buffers[fd + 1]);
 	}
 	printf("\n");
-	DEBUG("FIRST CALL: %d %s %d %d %d\n", buf.fd, buf.buffer, buf.capacity, buf.len, buf.pos);
-	res = ft_get_line_from_buffer(&buf, line);
+	DEBUG("FIRST CALL: %d %s %d %d %d\n",buffers[fd+1].fd,buffers[fd+1].buffer,buffers[fd+1].capacity,buffers[fd+1].len,buffers[fd+1].pos);
+	res = ft_get_line_from_buffer(&buffers[fd + 1], line);
 	if (res == MALLOC_ERROR)
 		return (0);
 	if (res == ENDL_NOT_FOUND)
-		res = ft_append_line(&buf, line);
+		res = ft_append_line(&buffers[fd + 1], line);
 	DEBUG("total line is %s", *line);
 	if (res == MALLOC_ERROR)
 		return (0);
@@ -325,14 +337,19 @@ int		main(void)
 		line[i] = 'A';
 	}
 	line[9] = 0;
-	int fd = open("file1", O_RDONLY);
+
+	int fd1 = open("file1", O_RDONLY);
+	int fd2 = open("1.txt", O_RDONLY);
 
 	ret = 1;
 	while (ret)
 	{
-		ret = get_next_line(fd, &line);
-		printf("\n%d: <%s>", ret, line);
+		ret = get_next_line(fd2, &line);
+		printf("\n%d->%d: <%s>", fd2, ret, line);
+		ret = get_next_line(fd1, &line);
+		printf("\n%d->%d: <%s>", fd1, ret, line);
 	}
+
 	//printf(GREY "%s", "\xE2\x82\x81\xE2\x82\x81\0");
 
 	return (0);
