@@ -4,20 +4,21 @@
 #include <fcntl.h>
 #include "libft.h"
 
-#define BUFF_SIZE 1
+#define BUFF_SIZE 20
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <stdarg.h>
 
-#define DEBUG_ON 0
+#define DEBUG_ON 1
 
-#define RED "\x1B[31m"
-#define GREEN "\x1B[32m"
-#define YELLOW "\x1B[33m"
-#define BLUE "\x1B[34m"
+#define RED "\x1B[1m\x1B[31m"
+#define GREEN "\x1B[1m\x1B[32m"
+#define YELLOW "\x1B[1m\x1B[33m"
+#define BLUE "\x1B[1m\x1B[34m"
 #define WHITE "\x1B[0m"
 #define BOLD "\x1B[1m"
+#define GREY "\x1B[0m\x1B[37m"
 
 #define DEBUG(msg, ...) ft_debug(msg, (char*)__FILE__, (char*)__func__, __LINE__, ##__VA_ARGS__)
 
@@ -51,17 +52,44 @@ void ft_print_char_debug(char c)
 	{
 		fprintf(DEBUG_STREAM, BLUE "%c", c);
 	}
-	fprintf(DEBUG_STREAM, BLUE);
 	fflush(DEBUG_STREAM);
+}
+
+void ft_print_index_superscript(int n, char pows[10][4])
+{
+	char *num = ft_itoa(n);
+	int i = 0;
+	while (num[i])
+	{
+		fprintf(DEBUG_STREAM, GREY "%s", pows[num[i] - '0']);
+		i++;
+	}
+	free(num);
 }
 
 void ft_print_str_debug(char *str)
 {
+	int i = 0;
+	char pows[10][4] = {
+			"\xe2\x81\xb0\0",
+			"\xc2\xb9\0\0",
+			"\xc2\xb2\0\0",
+			"\xc2\xb3\0\0",
+			"\xe2\x81\xb4\0",
+			"\xe2\x81\xb5\0",
+			"\xe2\x81\xb6\0",
+			"\xe2\x81\xb7\0",
+			"\xe2\x81\xb8\0",
+			"\xe2\x81\xb9\0",
+	};
+
 	fprintf(DEBUG_STREAM, BLUE "<");
-	while (*str)
+	while (str[i])
 	{
-		ft_print_char_debug(*str);
-		str++;
+		ft_print_char_debug(str[i]);
+		ft_print_index_superscript(i, pows);
+		fprintf(DEBUG_STREAM, BLUE);
+		i++;
 	}
 	fprintf(DEBUG_STREAM, BLUE ">");
 }
@@ -140,6 +168,7 @@ char** ft_get_vars_names(char *file, int line)
 		str[i] = b;
 		i++;
 	}
+	close(fd);
 	i = 0;
 	while (i < 2){
 		while (*str && *str != '"')
@@ -210,6 +239,11 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 	buf->pos += i;
 	DEBUG("new part is %s", *line);
 	DEBUG("%d %d", buf->pos, i);
+	if (i == 0 && buf->len != buf->capacity)
+	{
+		DEBUG("NO_LINE");
+		return (NO_LINE);
+	}
 	if (buf->buffer[buf->pos] == '\n')
 	{
 		if (buf->pos != buf->len)
@@ -219,11 +253,6 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 		DEBUG("%d", buf->pos);
 		DEBUG("ENDL_GOT %s", buf->buffer);
 		return (ENDL_GOT);
-	}
-	if (i == 0)
-	{
-		DEBUG("NO_LINE");
-		return (NO_LINE);
 	}
 	DEBUG("ENDL_NOT_FOUND %s", buf->buffer);
 	return (ENDL_NOT_FOUND);
@@ -304,6 +333,7 @@ int		main(void)
 		ret = get_next_line(fd, &line);
 		printf("\n%d: <%s>", ret, line);
 	}
+	//printf(GREY "%s", "\xE2\x82\x81\xE2\x82\x81\0");
 
 	return (0);
 }
