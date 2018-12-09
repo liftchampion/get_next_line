@@ -1,14 +1,13 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 50
+# define BUFF_SIZE 1
 
 #include<string.h>
 #include<unistd.h>
 
 typedef struct
 {
-	int		fd;
 	char	*buffer;
 	size_t	capacity;
 	ssize_t	len;

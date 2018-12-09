@@ -4,8 +4,14 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#include "libft.h"
+
 int		main(void)
 {
+
+	t_map *map = ft_make_std_map(INT32_T, INT32_T);
+
+
 	char *line;
 	int ret;
 	line = (char*)malloc(10);

@@ -13,16 +13,18 @@ ssize_t ft_readn(const int fd, t_buf *buf)
 	ssize_t res_of_read;
 
 	res_of_read = read(fd, buf->buffer, buf->capacity);
+	if (res_of_read == -1)
+		return (-1);
 	buf->len = res_of_read;
 	buf->pos = 0;
 	while ((size_t)buf->len != buf->capacity)
 	{
 		res_of_read = read(fd, buf->buffer + buf->len, buf->capacity - buf->len);
+		if (res_of_read == -1)
+			return (-1);
 		buf->len += res_of_read;
 		if (res_of_read == 0)
-		{
 			break ;
-		}
 	}
 	return buf->len;
 }
@@ -53,7 +55,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 	return (ENDL_NOT_FOUND);
 }
 
-t_result ft_append_line(t_buf *buf, char **line)
+t_result ft_append_line(t_buf *buf, int fd, char **line)
 {
 	char *new_part;
 	char *tmp;
@@ -64,7 +66,7 @@ t_result ft_append_line(t_buf *buf, char **line)
 		return ENDL_GOT;
 	while (res == ENDL_NOT_FOUND && (size_t)buf->len == buf->capacity)
 	{
-		ft_readn(buf->fd, buf);
+		ft_readn(fd, buf);
 		res = ft_get_line_from_buffer(buf, &new_part);
 		if (res == MALLOC_ERROR)
 			return (MALLOC_ERROR);
@@ -83,27 +85,52 @@ t_result ft_append_line(t_buf *buf, char **line)
 int		get_next_line(const int fd, char **line)
 {
 	t_result res;
-	static t_buf buffers[11001] = {(t_buf){JUST_INITIALIZED, 0, 0, 0, 0}};
-	int i;
+	static t_map *fd_buf = 0;
+	t_buf **curr_buf;
 
-	char b;
-	if (fd == -1 || BUFF_SIZE <= 0 || read(fd, &b, 0 == -1))
-		return (-1);
+	/**char b;
+	if (fd == -1 || BUFF_SIZE <= 0 || read(fd, &b, 0) == -1)
+		return (-1);*/
+	if(fd_buf == 0)
+		fd_buf = ft_make_custom_value_map(INT32_T, free);
+	curr_buf = (t_buf**)ft_map_get(fd_buf, (void*)(size_t)fd);
+	if (*(void**)curr_buf == fd_buf->nil)
+	{
+		if (!(*curr_buf = (t_buf*)malloc(sizeof(t_buf))))
+			return (-1);
+		**curr_buf = (t_buf){(char*)malloc(BUFF_SIZE), BUFF_SIZE, 0, 0};
+		if (!(*curr_buf)->buffer || ft_readn(fd, *curr_buf) == -1)
+			return (-1);
+	}
+	res = ft_get_line_from_buffer(*curr_buf, line);
+	if (res == MALLOC_ERROR)
+		return (0);
+	if (res == ENDL_NOT_FOUND)
+		res = ft_append_line(*curr_buf, fd, line);
+	if (res == MALLOC_ERROR)
+		return (0);
+	if (res == ENDL_GOT || res == NO_LINE)
+		return (res == ENDL_GOT ? 1 : 0);
+	return (0);
 
-	i = -1;
+
+	/**i = -1;
 	if (buffers[0].fd == JUST_INITIALIZED)
 		while (++i < 11001)
-			buffers[i] = (t_buf){i - 1, 0, BUFF_SIZE, BUFF_SIZE, BUFF_SIZE};
+			buffers[i] = (t_buf){i - 1, 0, BUFF_SIZE, BUFF_SIZE, BUFF_SIZE};*/
 
-	if (buffers[fd + 1].buffer == 0)
+	/**if (buffers[fd + 1].buffer == 0)
 	{
 		if (!(buffers[fd + 1].buffer = (char*)malloc(buffers[fd + 1].capacity + 1)))
 			return (0);
 		buffers[fd + 1].fd = fd;
 		(buffers[fd + 1].buffer)[buffers[fd + 1].capacity] = 0;
 		ft_readn(fd, &buffers[fd + 1]);
-	}
-	printf("\n");
+	}*/
+
+
+
+	/**printf("\n");
 	res = ft_get_line_from_buffer(&buffers[fd + 1], line);
 	if (res == MALLOC_ERROR)
 		return (0);
@@ -113,6 +140,6 @@ int		get_next_line(const int fd, char **line)
 		return (0);
 	if (res == ENDL_GOT || res == NO_LINE)
 		return (res == ENDL_GOT ? 1 : 0);
-	return (0);
+	return (0);*/
 }
 
