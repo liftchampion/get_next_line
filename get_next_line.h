@@ -5,6 +5,7 @@
 
 #include<string.h>
 #include<unistd.h>
+#include "libft.h"
 
 typedef struct
 {
@@ -22,6 +23,26 @@ typedef enum {
 	JUST_INITIALIZED = -777
 } t_result;
 
+typedef struct	s_v_string
+{
+	char		*data;
+	size_t		capacity;
+	size_t		len;
+}				t_v_string;
+
 int		get_next_line(const int fd, char **line);
+
+
+
+
+void *ft_realloc(void *old_data, size_t prev_size, size_t new_size);
+
+void ft_v_string_free(t_v_string *str);
+
+t_int8 ft_v_string_fit(t_v_string *str);
+
+t_int8 ft_v_string_push_back(t_v_string *str, char c);
+
+t_v_string *ft_make_v_string(size_t init_size);
 
 #endif

@@ -8,22 +8,19 @@
 
 int		main(void)
 {
-
-	t_map *map = ft_make_std_map(INT32_T, INT32_T);
-
-
 	char *line;
 	int ret;
 	line = (char*)malloc(10);
 	for (int i = 0; i < 9; i++)
 	{
-		line[i] = 'A';
+		line[i] = 'Z';
 	}
 	line[9] = 0;
 
-	int fd1 = open("asd", O_RDONLY);
+	//int fd1 = open("asd", O_RDONLY);
 	//int fd1 = open("../../BitBucket/libft_main/main.c", O_RDONLY);
-	//int fd1 = open("file1", O_RDONLY);
+	int fd1 = open("file1", O_RDONLY);
+	//int fd1 = open("noendl", O_RDONLY);
 	int fd2 = open("1.txt", O_RDONLY);
 	int fd3 = open("empty_strs", O_RDONLY);
 
