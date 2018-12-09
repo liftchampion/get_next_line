@@ -36,6 +36,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 	i = 0;
 	while (buf->pos + i < buf->len && buf->buffer[buf->pos + i] != '\n')
 		i++;
+	printf(GREEN "%d\n", i);
 	*line = ft_strsub(buf->buffer, (unsigned int)buf->pos, (size_t)i);
 	if (!*line)
 		return (MALLOC_ERROR);
@@ -79,6 +80,8 @@ t_result ft_append_line(t_buf *buf, int fd, char **line)
 		free(*line);
 		*line = tmp;
 	}
+	printf(BLUE "<%s>\n", *line);
+	printf(WHITE);
 	return (ENDL_GOT);
 }
 
@@ -88,9 +91,6 @@ int		get_next_line(const int fd, char **line)
 	static t_map *fd_buf = 0;
 	t_buf **curr_buf;
 
-	/**char b;
-	if (fd == -1 || BUFF_SIZE <= 0 || read(fd, &b, 0) == -1)
-		return (-1);*/
 	if(fd_buf == 0)
 		fd_buf = ft_make_custom_value_map(INT32_T, free);
 	curr_buf = (t_buf**)ft_map_get(fd_buf, (void*)(size_t)fd);
@@ -103,6 +103,8 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 	}
 	res = ft_get_line_from_buffer(*curr_buf, line);
+	printf(RED "<%s> %d\n", *line, res);
+	printf(WHITE);
 	if (res == MALLOC_ERROR)
 		return (0);
 	if (res == ENDL_NOT_FOUND)

@@ -6,7 +6,7 @@
 /*   By: ggerardy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:25:22 by ggerardy          #+#    #+#             */
-/*   Updated: 2018/11/26 17:25:22 by ggerardy         ###   ########.fr       */
+/*   Updated: 2018/12/09 04:47:12 by ggerardy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <string.h>
+# include "ft_map.h"
+
+char				*ft_strset(char *b, int c, size_t size);
 
 void				*ft_memset(void *b, int c, size_t len);
 
@@ -30,8 +33,6 @@ void				*ft_memchr(const void *str, int ch, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t len);
 
 size_t				ft_strlen(char const *s);
-
-int					ft_numlen(int num);
 
 char				*ft_strdup(const char *src);
 
