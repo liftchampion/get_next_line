@@ -45,6 +45,7 @@ int		main(void)
 			ft_putchar('\n');
 		ft_putchar('<');
 		ret = get_next_line(fd1, &line);
+		sleep(10);
 		ft_putstr(line);
 		ft_putchar('>');
 		free(line);

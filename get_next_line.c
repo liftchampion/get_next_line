@@ -26,7 +26,7 @@ t_v_string *ft_make_v_string(size_t init_size)
 	t_v_string *str = (t_v_string*)malloc(sizeof(t_v_string) * 1);
 	if (!str)
 		return (0);
-	str->capacity = init_size == 0 ? 1 : init_size;
+	str->capacity = init_size <= 1 ? 2 : init_size;
 	str->data = (char*)malloc(sizeof(char) * (str->capacity));
 	if (!str->data)
 	{
@@ -86,15 +86,17 @@ void ft_v_string_free(t_v_string *str)
 
 t_int8 ft_v_string_fit(t_v_string *str)
 {
-	if (str->len == str->capacity)
+	if (str->len == str->capacity - 1)
 		return (1);
-	str->data = ft_realloc(str->data, str->capacity, str->len);
+	str->data = ft_realloc(str->data, str->capacity,
+										str->len == 0 ? 2 : str->len + 1);
 	if (!str->data)
 	{
 		free(str);
 		return (0);
 	}
-	str->capacity = str->len == 0 ? 1 : str->len;
+	str->data[str->len] = 0;
+	str->capacity = str->len == 0 ? 2 : str->len + 1;
 	return (1);
 }
 
