@@ -128,14 +128,14 @@ t_int8 ft_v_string_fit(t_v_string *str)
 
 t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str, int fd)
 {
-	//printf("PASKUDA\n");
+	printf(GREEN "HUILO\n");
 	int was_endl;
 
 	if (buf->pos >= buf->len)
 	{
 		buf->len = read(fd, buf->buffer, BUFF_SIZE);
 		buf->pos = 0;
-		//printf(YELLOW "%zu\n", buf->len);
+		printf(YELLOW "%zu\n", buf->len);
 		if (buf->len == 0)
 			return (NO_LINE);
 	}
@@ -156,34 +156,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str, int fd)
 		return (ENDL_GOT);
 
 	return (ENDL_NOT_FOUND);
-	//printf(GREEN "%d\n", i);
 
-
-	//printf("PASKUDA2\n");
-	/**if (buf->len == 0)
-	{
-		return (NO_LINE);
-	}
-	//printf("PASKUDA3\n");
-
-	*line = ft_strsub(buf->buffer, (unsigned int)buf->pos, (size_t)i);  //TODO don't use strsub
-	//printf(GREEN "<%s>\n", *line);
-	if (!*line)
-		return (MALLOC_ERROR);
-	buf->pos += i;
-	if (i == 0 && buf->pos == buf->len && (size_t)buf->len != buf->capacity)
-	{
-		return (NO_LINE);
-	}
-	if (buf->buffer[buf->pos] == '\n')
-	{
-		if (buf->pos != buf->len)
-		{
-			buf->pos++;
-		}
-		return (ENDL_GOT);
-	}
-	return (ENDL_NOT_FOUND);*/
 }
 
 
@@ -191,7 +164,7 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 {
 	t_result res;
 
-	//printf("SUKA\n");
+	printf(RED "SUKA\n");
 	res = ENDL_NOT_FOUND;
 	/*if ((size_t)buf->len != buf->capacity)
 		return ENDL_GOT;*/
@@ -204,8 +177,8 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 		if (res == MALLOC_ERROR || res == NO_LINE)
 			return (res);
 	}
-	//printf(BLUE "<%s>\n", *line);
-	//printf(WHITE);
+	printf(BLUE "[%s]\n", str->data);
+	printf(WHITE);
 	return (ENDL_GOT);
 }
 
@@ -217,8 +190,9 @@ void ft_free_buf(void *buf)
 
 int		get_next_line(const int fd, char **line)
 {
+	printf(BLUE "PASKUDA\n");
 	static t_map *fd_buf = 0;
-	t_result res;
+	t_result res = ENDL_NOT_FOUND;
 	t_buf **curr_buf;
 	t_v_string *str;
 
@@ -237,13 +211,20 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 	}
 
-	//printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
-	//printf(WHITE);
+	printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
+	printf(WHITE);
 	if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR
 		return (0);
-	str = ft_make_v_string(0);			// TODO do it only if needed
-	res = ft_get_line_from_buffer(*curr_buf, str, fd);
-	//printf(BLUE "<%s>%d\n", str->data, res);
+	//if ((*curr_buf)->len == 0)
+	//	res = NO_LINE;
+
+
+	printf(YELLOW "%d\n", res);
+
+	str = ft_make_v_string(0);			// TODO do it only if needed  move to get_line_from_buf(?)
+	res = ft_get_line_from_buffer(*curr_buf, str, fd); // TODO delay vector v g_l_f esli !ne stroka i zbs
+	printf(GREEN "<%s>%d\n", str->data, res);
+	printf(WHITE);
 
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, str);
@@ -265,6 +246,9 @@ int		get_next_line(const int fd, char **line)
 		return (0);
 	}
 
+	printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
+	printf(WHITE);
+
 	/*if (res == ENDL_GOT || res == NO_LINE)
 	{
 		//return ((res == ENDL_GOT ? 1 : 0) * 666);
@@ -273,34 +257,5 @@ int		get_next_line(const int fd, char **line)
 	//ft_print_v_string(str);
 
 	return (1);  // TODO shrink to fit returned value
-
-
-	/**i = -1;
-	if (buffers[0].fd == JUST_INITIALIZED)
-		while (++i < 11001)
-			buffers[i] = (t_buf){i - 1, 0, BUFF_SIZE, BUFF_SIZE, BUFF_SIZE};*/
-
-	/**if (buffers[fd + 1].buffer == 0)
-	{
-		if (!(buffers[fd + 1].buffer = (char*)malloc(buffers[fd + 1].capacity + 1)))
-			return (0);
-		buffers[fd + 1].fd = fd;
-		(buffers[fd + 1].buffer)[buffers[fd + 1].capacity] = 0;
-		ft_readn(fd, &buffers[fd + 1]);
-	}*/
-
-
-
-	/**printf("\n");
-	res = ft_get_line_from_buffer(&buffers[fd + 1], line);
-	if (res == MALLOC_ERROR)
-		return (0);
-	if (res == ENDL_NOT_FOUND)
-		res = ft_append_line(&buffers[fd + 1], line);
-	if (res == MALLOC_ERROR)
-		return (0);
-	if (res == ENDL_GOT || res == NO_LINE)
-		return (res == ENDL_GOT ? 1 : 0);
-	return (0);*/
 }
 

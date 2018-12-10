@@ -41,12 +41,13 @@ int		main(void)
 		//printf("\n%d->%d: <%s>", fd2, ret, line);
 		//ret = get_next_line(fd3, &line);
 		//printf("\n%d->%d: <%s>", fd3, ret, line);
-		if (ret != 2)
-			ft_putchar('\n');
-		ft_putchar('<');
+		//if (ret != 2)
+			//ft_putchar('\n');
+		//ft_putchar('<');
 		ret = get_next_line(fd1, &line);
-		ft_putstr(line);
-		ft_putchar('>');
+		printf("<%s>\n", line);
+		//ft_putstr(line);
+		//ft_putchar('>');
 		free(line);
 		///if (ret == 0)
 		///	break ;
