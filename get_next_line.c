@@ -18,7 +18,7 @@ void ft_print_v_string(t_v_string *str)
 		ft_putchar(str->data[i]);
 		i++;
 	}
-	ft_putchar('\n');
+	//ft_putchar('\n');
 }
 
 t_v_string *ft_make_v_string(size_t init_size)
@@ -207,6 +207,12 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 	return (ENDL_GOT);
 }
 
+void ft_free_buf(void *buf)
+{
+	free(((t_buf*)buf)->buffer);
+	free(buf);
+}
+
 int		get_next_line(const int fd, char **line)
 {
 	static t_map *fd_buf = 0;
@@ -218,7 +224,7 @@ int		get_next_line(const int fd, char **line)
 		return (-1);
 
 	if(fd_buf == 0)
-		fd_buf = ft_make_custom_value_map(INT32_T, free);
+		fd_buf = ft_make_custom_value_map(INT32_T, ft_free_buf);
 	curr_buf = (t_buf**)ft_map_get(fd_buf, (void*)(size_t)fd);
 	if (*(void**)curr_buf == fd_buf->nil)
 	{
@@ -244,16 +250,25 @@ int		get_next_line(const int fd, char **line)
 	//printf(GREEN "<%s>\n", str->data);
 	//printf(WHITE);
 
+
+	ft_v_string_fit(str);
 	*line = str->data;
+	free(str);
+
 
 	if (res == NO_LINE)
+	{
+		ft_map_del(fd_buf, (void*)(size_t)fd);
+		ft_free_map(&fd_buf);
 		return (0);
+	}
+
 	/*if (res == ENDL_GOT || res == NO_LINE)
 	{
 		//return ((res == ENDL_GOT ? 1 : 0) * 666);
 		return (res == ENDL_GOT ? 1 : 0);
 	}*/
-	ft_print_v_string(str);
+	//ft_print_v_string(str);
 
 	return (1);  // TODO shrink to fit returned value
 
