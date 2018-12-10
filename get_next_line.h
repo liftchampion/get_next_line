@@ -1,7 +1,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 2
+# define BUFF_SIZE 30000000
 
 #include<string.h>
 #include<unistd.h>
@@ -10,7 +10,7 @@
 typedef struct
 {
 	char	*buffer;
-	size_t	capacity;
+	ssize_t	capacity;
 	ssize_t	len;
 	ssize_t	pos;
 }			t_buf;

@@ -111,27 +111,36 @@ t_int8 ft_v_string_fit(t_v_string *str)
 
 
 
-t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str)
+t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str, int fd)
 {
-	printf("PASKUDA\n");
-	ssize_t i;
+	//printf("PASKUDA\n");
+	int was_endl;
 
-	i = 0;
-	while (buf->pos + i < buf->len && buf->buffer[buf->pos + i] != '\n')
+	if (buf->pos >= buf->len)
 	{
-		printf("PIZDA\n");
-		if (!ft_v_string_push_back(str, buf->buffer[buf->pos + i]))
+		buf->len = read(fd, buf->buffer, BUFF_SIZE);
+		buf->pos = 0;
+		//printf(YELLOW "%zu\n", buf->len);
+		if (buf->len == 0)
+			return (NO_LINE);
+	}
+
+	while (buf->pos < buf->len && buf->buffer[buf->pos] != '\n')
+	{
+		//printf("PIZDA\n");
+		if (!ft_v_string_push_back(str, buf->buffer[buf->pos]))
 			return (MALLOC_ERROR);
-		i++;
+		buf->pos++;
 	}
-	if (buf->buffer[buf->pos + i] == '\n' || (buf->pos + i == buf->len && buf->len <= buf->capacity))
-	{
+	was_endl = buf->buffer[buf->pos] == '\n' ? 1 : 0;
+	buf->pos += was_endl;
+
+
+
+	if (was_endl || (buf->pos - was_endl == buf->len && buf->len < buf->capacity))
 		return (ENDL_GOT);
-	}
-	else
-	{
-		return (ENDL_NOT_FOUND);
-	}
+
+	return (ENDL_NOT_FOUND);
 	//printf(GREEN "%d\n", i);
 
 
@@ -165,28 +174,20 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str)
 
 t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 {
-	char *new_part;
-	char *tmp;
 	t_result res;
 
-	printf("SUKA\n");
+	//printf("SUKA\n");
 	res = ENDL_NOT_FOUND;
-	if ((size_t)buf->len != buf->capacity)
-		return ENDL_GOT;
-	while (res == ENDL_NOT_FOUND && (size_t)buf->len == buf->capacity)
+	/*if ((size_t)buf->len != buf->capacity)
+		return ENDL_GOT;*/
+	while (res == ENDL_NOT_FOUND)
 	{
-		read(fd, buf, BUFF_SIZE);
-		res = ft_get_line_from_buffer(buf, &new_part);
+		//printf("PIDRILNIK\n");
+		buf->len = read(fd, buf->buffer, BUFF_SIZE);
+		buf->pos = 0;
+		res = ft_get_line_from_buffer(buf, str, fd);
 		if (res == MALLOC_ERROR || res == NO_LINE)
 			return (res);
-		tmp = ft_strjoin(*line, new_part);
-		if (tmp == 0)
-		{
-			free(new_part);
-			return (MALLOC_ERROR);
-		}
-		free(*line);
-		*line = tmp;
 	}
 	//printf(BLUE "<%s>\n", *line);
 	//printf(WHITE);
@@ -200,7 +201,8 @@ int		get_next_line(const int fd, char **line)
 	t_buf **curr_buf;
 	t_v_string *str;
 
-	int GOVNO = 66;
+	if (fd < 0)
+		return (-1);
 
 	if(fd_buf == 0)
 		fd_buf = ft_make_custom_value_map(INT32_T, free);
@@ -214,25 +216,31 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 	}
 
-	printf(RED "<%s> %zu\n", (*curr_buf)->buffer, (*curr_buf)->len);
+	//printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
 	//printf(WHITE);
-	if ((*curr_buf)->len == 0)
+	if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR
 		return (0);
-	str = ft_make_v_string(0);
-	res = ft_get_line_from_buffer(*curr_buf, str);
-	printf(BLUE "<%s>\n", str->data);
+	str = ft_make_v_string(0);			// TODO do it only if needed
+	res = ft_get_line_from_buffer(*curr_buf, str, fd);
+	//printf(BLUE "<%s>%d\n", str->data, res);
 
 	if (res == ENDL_NOT_FOUND)
-		res = ft_append_line(*curr_buf, fd, line);
+		res = ft_append_line(*curr_buf, fd, str);
 	if (res == MALLOC_ERROR)
-		return (500);
-	printf(BLUE "<%s>\n", str->data);
+		return (-1);
+	//printf(GREEN "<%s>\n", str->data);
+	//printf(WHITE);
+
+	*line = str->data;
+
+	if (res == NO_LINE)
+		return (0);
 	/*if (res == ENDL_GOT || res == NO_LINE)
 	{
 		//return ((res == ENDL_GOT ? 1 : 0) * 666);
 		return (res == ENDL_GOT ? 1 : 0);
 	}*/
-	return (0);
+	return (1);  // TODO shrink to fit returned value
 
 
 	/**i = -1;
