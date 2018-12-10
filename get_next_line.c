@@ -8,6 +8,19 @@
 #include "get_next_line.h"
 
 
+void ft_print_v_string(t_v_string *str)
+{
+	size_t i;
+
+	i = 0;
+	while (i < str->len)
+	{
+		ft_putchar(str->data[i]);
+		i++;
+	}
+	ft_putchar('\n');
+}
+
 t_v_string *ft_make_v_string(size_t init_size)
 {
 	t_v_string *str = (t_v_string*)malloc(sizeof(t_v_string) * 1);
@@ -240,6 +253,8 @@ int		get_next_line(const int fd, char **line)
 		//return ((res == ENDL_GOT ? 1 : 0) * 666);
 		return (res == ENDL_GOT ? 1 : 0);
 	}*/
+	ft_print_v_string(str);
+
 	return (1);  // TODO shrink to fit returned value
 
 

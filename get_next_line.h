@@ -1,7 +1,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 30000000
+# define BUFF_SIZE 30
 
 #include<string.h>
 #include<unistd.h>
@@ -36,6 +36,8 @@ int		get_next_line(const int fd, char **line);
 
 
 void *ft_realloc(void *old_data, size_t prev_size, size_t new_size);
+
+void ft_print_v_string(t_v_string *str);
 
 void ft_v_string_free(t_v_string *str);
 
