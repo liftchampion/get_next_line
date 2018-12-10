@@ -28,8 +28,8 @@ int		main(void)
 	//int fd1 = open("main.o", O_RDONLY);
 	//int fd1 = open("test_cat", O_RDONLY);
 	//int fd1 = open("file1", O_RDONLY);
-	//int fd1 = open("1.txt", O_RDONLY);
-	int fd1 = open("one_big_fat_line.txt", O_RDONLY);
+	int fd1 = open("1.txt", O_RDONLY);
+	//int fd1 = open("one_big_fat_line.txt", O_RDONLY);
 	//int fd1 = open("noenld", O_RDONLY);
 	int fd2 = open("1.txt", O_RDONLY);
 	int fd3 = open("empty_strs", O_RDONLY);
@@ -45,7 +45,6 @@ int		main(void)
 			ft_putchar('\n');
 		ft_putchar('<');
 		ret = get_next_line(fd1, &line);
-		sleep(10);
 		ft_putstr(line);
 		ft_putchar('>');
 		free(line);
