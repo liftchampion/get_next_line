@@ -111,19 +111,32 @@ t_int8 ft_v_string_fit(t_v_string *str)
 
 
 
-t_result ft_get_line_from_buffer(t_buf *buf, char **line)
+t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str)
 {
 	printf("PASKUDA\n");
 	ssize_t i;
 
 	i = 0;
 	while (buf->pos + i < buf->len && buf->buffer[buf->pos + i] != '\n')
+	{
+		printf("PIZDA\n");
+		if (!ft_v_string_push_back(str, buf->buffer[buf->pos + i]))
+			return (MALLOC_ERROR);
 		i++;
+	}
+	if (buf->buffer[buf->pos + i] == '\n' || (buf->pos + i == buf->len && buf->len <= buf->capacity))
+	{
+		return (ENDL_GOT);
+	}
+	else
+	{
+		return (ENDL_NOT_FOUND);
+	}
 	//printf(GREEN "%d\n", i);
 
 
 	//printf("PASKUDA2\n");
-	if (buf->len == 0)
+	/**if (buf->len == 0)
 	{
 		return (NO_LINE);
 	}
@@ -146,11 +159,11 @@ t_result ft_get_line_from_buffer(t_buf *buf, char **line)
 		}
 		return (ENDL_GOT);
 	}
-	return (ENDL_NOT_FOUND);
+	return (ENDL_NOT_FOUND);*/
 }
 
 
-t_result ft_append_line(t_buf *buf, int fd, char **line)
+t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 {
 	char *new_part;
 	char *tmp;
@@ -182,12 +195,12 @@ t_result ft_append_line(t_buf *buf, int fd, char **line)
 
 int		get_next_line(const int fd, char **line)
 {
-	t_result res;
 	static t_map *fd_buf = 0;
+	t_result res;
 	t_buf **curr_buf;
+	t_v_string *str;
 
 	int GOVNO = 66;
-
 
 	if(fd_buf == 0)
 		fd_buf = ft_make_custom_value_map(INT32_T, free);
@@ -205,18 +218,20 @@ int		get_next_line(const int fd, char **line)
 	//printf(WHITE);
 	if ((*curr_buf)->len == 0)
 		return (0);
-	res = ft_get_line_from_buffer(*curr_buf, line);
-	printf(BLUE "<%s>\n", *line);
+	str = ft_make_v_string(0);
+	res = ft_get_line_from_buffer(*curr_buf, str);
+	printf(BLUE "<%s>\n", str->data);
 
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, line);
 	if (res == MALLOC_ERROR)
 		return (500);
-	if (res == ENDL_GOT || res == NO_LINE)
+	printf(BLUE "<%s>\n", str->data);
+	/*if (res == ENDL_GOT || res == NO_LINE)
 	{
-		return ((res == ENDL_GOT ? 1 : 0) * 666);
-		//return (res == ENDL_GOT ? 1 : 0);
-	}
+		//return ((res == ENDL_GOT ? 1 : 0) * 666);
+		return (res == ENDL_GOT ? 1 : 0);
+	}*/
 	return (0);
 
 
