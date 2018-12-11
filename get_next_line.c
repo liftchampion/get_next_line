@@ -138,6 +138,7 @@ t_int8 ft_v_string_fit(t_v_string *str)
 t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 {
 	///printf(GREEN "GLF\n");
+	///printf(WHITE);
 	int was_endl;
 
 	if (buf->pos >= buf->len)
@@ -171,7 +172,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 			return (MALLOC_ERROR);
 		buf->pos++;
 	}
-	was_endl = buf->buffer[buf->pos] == '\n' ? 1 : 0;
+	was_endl = (buf->pos < buf->len && buf->buffer[buf->pos] == '\n') ? 1 : 0;
 	buf->pos += was_endl;
 	if (was_endl || (buf->pos - was_endl == buf->len && buf->len < buf->capacity))
 		return (ENDL_GOT);
@@ -184,6 +185,7 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 	t_result res;
 
 	///printf(RED "SUKA\n");
+	///printf(WHITE);
 	res = ENDL_NOT_FOUND;
 	/*if ((size_t)buf->len != buf->capacity)
 		return ENDL_GOT;*/
@@ -220,7 +222,7 @@ int		get_next_line(const int fd, char **line)
 
 	str = 0;
 
-	if (fd < 0)
+	if (fd < 0 || !line)
 		return (-1);
 
 	if (fd_buf == 0)
@@ -262,7 +264,7 @@ int		get_next_line(const int fd, char **line)
 	///printf(YELLOW "%d\n", res);
 	///printf(WHITE);
 
-	if (res == MALLOC_ERROR)
+	if (res == MALLOC_ERROR || res == READ_ERROR)
 		return (-1);
 	///printf(GREEN "<%s>\n", str != 0 ? str->data : "NULL");
 	///printf(WHITE);
@@ -270,12 +272,15 @@ int		get_next_line(const int fd, char **line)
 	ft_v_string_fit(str); // TODO protect this shit
 	*line = str == 0 ? 0 : str->data;
 	free(str);
-	if (res == NO_LINE || res == READ_ERROR)
+	printf("<%s>\n", *line);
+	if (res == NO_LINE)
 	{
+		///printf(YELLOW "FUCKING FUCK %d\n", res);
+		///printf(WHITE);
 		ft_map_del(fd_buf, (void*)(size_t)fd);
 		if (fd_buf->size == 0)
 			ft_free_map(&fd_buf);
-		return (res == NO_LINE ? 0 : -1);
+		return (0);
 	}
 
 	/*printf("SURPRISE MUTHERFUCKER! %p\n", str);

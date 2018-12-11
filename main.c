@@ -351,8 +351,9 @@ int		main(void)
 	//}
 	//line[9] = 0;
 
-	//diman_tests();
-	//return (0);
+
+	///diman_tests();
+	///return (0);
 
 	//int fd1 = open("asd", O_RDONLY);
 	//int fd1 = open("../../BitBucket/libft_main/main.c", O_RDONLY);
@@ -400,68 +401,127 @@ int		main(void)
 	int fd13 = open("file13", O_RDONLY);
 	int fd14 = open("file14", O_RDONLY);
 	int fd15 = open("file15", O_RDONLY);
+
+	int fd21 = open("file21", O_RDONLY);
+	int fd22 = open("file22", O_RDONLY);
+	int fd23 = open("file23", O_RDONLY);
+	int fd24 = open("file24", O_RDONLY);
+
 	char *f1 = (char *)ft_memalloc(1000);
 	char *f2 = (char *)ft_memalloc(1000);
 	char *f3 = (char *)ft_memalloc(1000);
 	char *f4 = (char *)ft_memalloc(1000);
 	char *f5 = (char *)ft_memalloc(1000);
+
+	char *f21 = (char *)ft_memalloc(1000);
+	char *f22 = (char *)ft_memalloc(1000);
+	char *f23 = (char *)ft_memalloc(1000);
+	char *f24 = (char *)ft_memalloc(1000);
+
 	int ret1 = 0;
 	int ret2 = 0;
 	int ret3 = 0;
 	int ret4 = 0;
 	int ret5 = 0;
+
+	int ret21 = 0;
+	int ret22 = 0;
+	int ret23 = 0;
+	int ret24 = 0;
 	c = 0;
 	ret = 1;
 	while (ret > 0)
 	{
 		ret = 0;
-		/*printf("PASKUDA1\n");
-		ret1 += get_next_line(fd11, &line);
+		/*///printf("PASKUDA1\n");
+		ret1 = get_next_line(fd11, &line);
 		if (c != 0 && ret1 != 0)
 			ft_strlcat(f1, "\n", 1000);
 		if (ret1 != 0)
 			ft_strlcat(f1, line, 1000);
 		free(line);
 
-		printf("PASKUDA2\n");
-		ret2 += get_next_line(fd12, &line);
+		///printf("PASKUDA2\n");
+		ret2 = get_next_line(fd12, &line);
 		if (c != 0 && ret2 != 0)
 			ft_strlcat(f2, "\n", 1000);
 		if (ret2 != 0)
 			ft_strlcat(f2, line, 1000);
 		free(line);
 
-		printf("PASKUDA3\n");
-		ret3 += get_next_line(fd13, &line);
+		///printf("PASKUDA3\n");
+		ret3 = get_next_line(fd13, &line);
 		if (c != 0 && ret3 != 0)
 			ft_strlcat(f3, "\n", 1000);
 		if (ret3 != 0)
 			ft_strlcat(f3, line, 1000);
 		free(line);
 
-		printf("PASKUDA4\n");
-		ret4 += get_next_line(fd14, &line);
+		///printf("PASKUDA4\n");
+		ret4 = get_next_line(fd14, &line);
 		if (c != 0 && ret4 != 0)
 			ft_strlcat(f4, "\n", 1000);
 		if (ret4 != 0)
 			ft_strlcat(f4, line, 1000);
-		free(line);*/
-
-		printf("PASKUDA5\n");
-		ret5 += get_next_line(fd15, &line);
-		printf("PASKUDA5.1\n");
-		if (c != 0 && ret5 != 0)
-			ft_strlcat(f5, "\n", 1000);
-		printf("PASKUDA5.2 <%s> %d\n", line, ret5);
-		if (ret5 != 0)
-			ft_strlcat(f5, line, 1000);
-		printf("PASKUDA5.3\n");
 		free(line);
 
-		ret = ret1 + ret2 + ret3 + ret4 + ret5;
+		///printf("PASKUDA5\n");
+		ret5 = get_next_line(fd15, &line);
+		if (c != 0 && ret5 != 0)
+			ft_strlcat(f5, "\n", 1000);
+		if (ret5 != 0)
+			ft_strlcat(f5, line, 1000);
+		free(line);*/
+
+
+		///printf("PASKUDA2.1\n");
+		ret21 = get_next_line(fd21, &line);
+		if (c != 0 && ret21 != 0)
+			ft_strlcat(f21, "\n", 1000);
+		if (ret21 != 0)
+			ft_strlcat(f21, line, 1000);
+		free(line);
+
+		///printf("PASKUDA2.2\n");
+		ret22 = get_next_line(fd22, &line);
+		if (c != 0 && ret22 != 0)
+			ft_strlcat(f22, "\n", 1000);
+		if (ret22 != 0)
+			ft_strlcat(f22, line, 1000);
+		free(line);
+
+		///printf("PASKUDA2.3\n");
+		ret23 = get_next_line(fd23, &line);
+		if (c != 0 && ret23 != 0)
+			ft_strlcat(f23, "\n", 1000);
+		if (ret23 != 0)
+			ft_strlcat(f23, line, 1000);
+		free(line);
+
+		///printf("PASKUDA2.4\n");
+		ret24 = get_next_line(fd24, &line);
+		if (c != 0 && ret24 != 0)
+			ft_strlcat(f24, "\n", 1000);
+		if (ret24 != 0)
+			ft_strlcat(f24, line, 1000);
+		free(line);
+
+		ret = ret1 + ret2 + ret3 + ret4 + ret5 + ret21 + ret22 + ret23 + ret24;
 
 		c++;
 	}
+	///printf("%s%s%s%s%s\n", f1, f2, f3, f4, f5);
+	//printf("%s\n%s\n%s\n%s\n", f21, f22, f23, f24);
+	free(f1);
+	free(f2);
+	free(f3);
+	free(f4);
+	free(f5);
+
+	free(f21);
+	free(f22);
+	free(f23);
+	free(f24);
 
 
 
