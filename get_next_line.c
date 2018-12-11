@@ -272,8 +272,9 @@ int		get_next_line(const int fd, char **line)
 	free(str);
 	if (res == NO_LINE || res == READ_ERROR)
 	{
-		//ft_map_del(fd_buf, (void*)(size_t)fd);
-		//ft_free_map(&fd_buf);
+		ft_map_del(fd_buf, (void*)(size_t)fd);
+		if (fd_buf->size == 0)
+			ft_free_map(&fd_buf);
 		return (res == NO_LINE ? 0 : -1);
 	}
 

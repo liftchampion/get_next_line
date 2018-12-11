@@ -332,11 +332,11 @@ void	test06(void)
 void	diman_tests()
 {
 	test01();
-	//test02();
-	//test03();
-	//test04();
-	//test05();
-	//test06();
+	test02();
+	test03();
+	test04();
+	test05();
+	test06();
 }
 
 
@@ -352,6 +352,7 @@ int		main(void)
 	//line[9] = 0;
 
 	//diman_tests();
+	//return (0);
 
 	//int fd1 = open("asd", O_RDONLY);
 	//int fd1 = open("../../BitBucket/libft_main/main.c", O_RDONLY);
@@ -365,7 +366,8 @@ int		main(void)
 	int fd3 = open("empty_strs", O_RDONLY);
 
 	ret = 2;
-	while (ret && ret != -1)
+	int c = 0;
+	/**while (ret && ret != -1)
 	{
 		//ret = get_next_line(fd2, &line);
 		//printf("\n%d->%d: <%s>", fd2, ret, line);
@@ -376,28 +378,92 @@ int		main(void)
 		ret = get_next_line(fd1, &line);
 		if (ret == 0)
 			break ;
-		if (ret != 2)
+		if (c != 0)
 			printf("\n");
 
 		///printf("{%p}\n", (void*)line);
-		printf("%s", line, ret);
+		printf("%s", line);
 		//ft_putstr(line);
 		//ft_putchar('>');
-		///free(line);
+		free(line);
 
 
 		//printf("<%s>", line);
 		//printf("\n%d->%d: <%s>", fd1, ret, line);
+		c++;
+	}*/
+
+
+
+	int fd11 = open("file11", O_RDONLY);
+	int fd12 = open("file12", O_RDONLY);
+	int fd13 = open("file13", O_RDONLY);
+	int fd14 = open("file14", O_RDONLY);
+	int fd15 = open("file15", O_RDONLY);
+	char *f1 = (char *)ft_memalloc(1000);
+	char *f2 = (char *)ft_memalloc(1000);
+	char *f3 = (char *)ft_memalloc(1000);
+	char *f4 = (char *)ft_memalloc(1000);
+	char *f5 = (char *)ft_memalloc(1000);
+	int ret1 = 0;
+	int ret2 = 0;
+	int ret3 = 0;
+	int ret4 = 0;
+	int ret5 = 0;
+	c = 0;
+	ret = 1;
+	while (ret > 0)
+	{
+		ret = 0;
+		/*printf("PASKUDA1\n");
+		ret1 += get_next_line(fd11, &line);
+		if (c != 0 && ret1 != 0)
+			ft_strlcat(f1, "\n", 1000);
+		if (ret1 != 0)
+			ft_strlcat(f1, line, 1000);
+		free(line);
+
+		printf("PASKUDA2\n");
+		ret2 += get_next_line(fd12, &line);
+		if (c != 0 && ret2 != 0)
+			ft_strlcat(f2, "\n", 1000);
+		if (ret2 != 0)
+			ft_strlcat(f2, line, 1000);
+		free(line);
+
+		printf("PASKUDA3\n");
+		ret3 += get_next_line(fd13, &line);
+		if (c != 0 && ret3 != 0)
+			ft_strlcat(f3, "\n", 1000);
+		if (ret3 != 0)
+			ft_strlcat(f3, line, 1000);
+		free(line);
+
+		printf("PASKUDA4\n");
+		ret4 += get_next_line(fd14, &line);
+		if (c != 0 && ret4 != 0)
+			ft_strlcat(f4, "\n", 1000);
+		if (ret4 != 0)
+			ft_strlcat(f4, line, 1000);
+		free(line);*/
+
+		printf("PASKUDA5\n");
+		ret5 += get_next_line(fd15, &line);
+		printf("PASKUDA5.1\n");
+		if (c != 0 && ret5 != 0)
+			ft_strlcat(f5, "\n", 1000);
+		printf("PASKUDA5.2 <%s> %d\n", line, ret5);
+		if (ret5 != 0)
+			ft_strlcat(f5, line, 1000);
+		printf("PASKUDA5.3\n");
+		free(line);
+
+		ret = ret1 + ret2 + ret3 + ret4 + ret5;
+
+		c++;
 	}
 
-	/*FILE *f = fopen("test_cat", "w+");
-	for (int e = 0; e < 256; e++)
-	{
-		fprintf(f, "%d = [%c] ", e, (char)e);
-		if (e != 0 && e % 10 == 0)
-			fprintf(f, "\n");
-	}
-	fclose(f);*/
+
 
 
 	return (0);
