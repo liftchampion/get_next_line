@@ -371,18 +371,20 @@ int		main(void)
 		//printf("\n%d->%d: <%s>", fd2, ret, line);
 		//ret = get_next_line(fd3, &line);
 		//printf("\n%d->%d: <%s>", fd3, ret, line);
-		//if (ret != 2)
-			//ft_putchar('\n');
+
 		//ft_putchar('<');
 		ret = get_next_line(fd1, &line);
+		if (ret == 0)
+			break ;
+		if (ret != 2)
+			printf("\n");
 
-		printf("{%p}\n", (void*)line);
-		printf("<%s> %d\n", line, ret);
+		///printf("{%p}\n", (void*)line);
+		printf("%s", line, ret);
 		//ft_putstr(line);
 		//ft_putchar('>');
 		///free(line);
-		if (ret == 0)
-			break ;
+
 
 		//printf("<%s>", line);
 		//printf("\n%d->%d: <%s>", fd1, ret, line);

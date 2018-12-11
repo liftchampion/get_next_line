@@ -137,17 +137,30 @@ t_int8 ft_v_string_fit(t_v_string *str)
 
 t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 {
-	///printf(GREEN "HUILO\n");
+	///printf(GREEN "GLF\n");
 	int was_endl;
 
 	if (buf->pos >= buf->len)
 	{
-		buf->len = read(fd, buf->buffer, BUFF_SIZE);
-		buf->pos = 0;
-		///printf(YELLOW "%zu\n", buf->len);
-		if (buf->len <= 0)
-			return (buf->len == 0 ? NO_LINE : READ_ERROR);
+		if (buf->len == buf->capacity)
+		{
+			buf->len = read(fd, buf->buffer, BUFF_SIZE);
+			buf->pos = 0;
+			///printf(YELLOW "in if paskuda - %zu\n", buf->len);
+			///printf(WHITE);
+			if (buf->len <= 0)
+				return (buf->len == 0 ? NO_LINE : READ_ERROR);
+		}
+		else
+		{
+			///printf(YELLOW "in else paskuda %p\n", *str);
+			///printf(WHITE);
+			return (*str == 0 ? NO_LINE : ENDL_GOT);
+		}
+
 	}
+	///printf(GREEN "hz\n");
+	///printf(WHITE);
 	if (!*str)
 		if (!(*str = ft_make_v_string(INIT_VECT_SIZE)))
 			return (MALLOC_ERROR);
@@ -176,10 +189,12 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 		return ENDL_GOT;*/
 	while (res == ENDL_NOT_FOUND)
 	{
-		///printf("PIDRILNIK\n");
+		///printf(RED "PIDRILNIK\n");
 		buf->len = read(fd, buf->buffer, BUFF_SIZE);
 		buf->pos = 0;
 		res = ft_get_line_from_buffer(buf, &str, fd);
+		///printf(BLUE "[%s]%d res_of_read - %zu\n", str->data, res, buf->len);
+		///printf(WHITE);
 		if (res == MALLOC_ERROR || res == NO_LINE)
 			return (res);
 	}
@@ -196,8 +211,8 @@ void ft_free_buf(void *buf)
 
 int		get_next_line(const int fd, char **line)
 {
-	printf(BLUE "PASKUDA\n");
-	printf(WHITE);
+	//printf(BLUE "PASKUDA\n");
+	//printf(WHITE);
 	static t_map *fd_buf = 0;
 	t_result res = ENDL_NOT_FOUND;
 	t_buf **curr_buf;
@@ -220,8 +235,9 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 	}
 
-	///printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
+	///printf(RED "<%s> %zu %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos, (*curr_buf)->capacity);
 	///printf(WHITE);
+
 	///if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR +
 	///	return (0);
 	//if ((*curr_buf)->len == 0)
@@ -232,15 +248,23 @@ int		get_next_line(const int fd, char **line)
 
 	///str = ft_make_v_string(0);			// TODO do it only if needed  move to get_line_from_buf(?) +
 	///res = ft_get_line_from_buffer(*curr_buf, &str, fd); // TODO delay vector v g_l_f esli !ne stroka i zbs +
-	///printf(GREEN "<%s>%d\n", str->data, res);
-	///printf(WHITE);
+
+
 
 	res = ft_get_line_from_buffer(*curr_buf, &str, fd);
+
+	///printf(GREEN "after first glf <%s>%d\n", str != 0 ? str->data : "NULL", res);
+	///printf(WHITE);
+
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, str);
+
+	///printf(YELLOW "%d\n", res);
+	///printf(WHITE);
+
 	if (res == MALLOC_ERROR)
 		return (-1);
-	///printf(GREEN "<%s>\n", str->data);
+	///printf(GREEN "<%s>\n", str != 0 ? str->data : "NULL");
 	///printf(WHITE);
 
 	ft_v_string_fit(str); // TODO protect this shit
