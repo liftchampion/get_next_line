@@ -12,13 +12,18 @@ void ft_print_v_string(t_v_string *str)
 {
 	size_t i;
 
+	if (!str)
+	{
+		ft_putstr("NO V_STRING");
+		return ;
+	}
 	i = 0;
 	while (i < str->len)
 	{
 		ft_putchar(str->data[i]);
 		i++;
 	}
-	//ft_putchar('\n');
+	//ft_putchar('\n'); // TODO verni, suka
 }
 
 t_v_string *ft_make_v_string(size_t init_size)
@@ -61,6 +66,8 @@ void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
 
 t_int8 ft_v_string_push_back(t_v_string *str, char c)
 {
+	if (!str)
+		return (-1);
 	if (str->len == str->capacity - 1)
 	{
 		str->data = ft_realloc(str->data, str->capacity, str->capacity * 2);
@@ -86,6 +93,8 @@ void ft_v_string_free(t_v_string *str)
 
 t_int8 ft_v_string_fit(t_v_string *str)
 {
+	if (!str)
+		return (-1);
 	if (str->len == str->capacity - 1)
 		return (1);
 	str->data = ft_realloc(str->data, str->capacity,
@@ -126,37 +135,34 @@ t_int8 ft_v_string_fit(t_v_string *str)
 
 
 
-t_result ft_get_line_from_buffer(t_buf *buf, t_v_string *str, int fd)
+t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 {
-	printf(GREEN "HUILO\n");
+	///printf(GREEN "HUILO\n");
 	int was_endl;
 
 	if (buf->pos >= buf->len)
 	{
 		buf->len = read(fd, buf->buffer, BUFF_SIZE);
 		buf->pos = 0;
-		printf(YELLOW "%zu\n", buf->len);
-		if (buf->len == 0)
-			return (NO_LINE);
+		///printf(YELLOW "%zu\n", buf->len);
+		if (buf->len <= 0)
+			return (buf->len == 0 ? NO_LINE : READ_ERROR);
 	}
-
+	if (!*str)
+		if (!(*str = ft_make_v_string(INIT_VECT_SIZE)))
+			return (MALLOC_ERROR);
 	while (buf->pos < buf->len && buf->buffer[buf->pos] != '\n')
 	{
-		//printf("PIZDA\n");
-		if (!ft_v_string_push_back(str, buf->buffer[buf->pos]))
+		///printf(RED "PIZDA\n");
+		if (!ft_v_string_push_back(*str, buf->buffer[buf->pos]))
 			return (MALLOC_ERROR);
 		buf->pos++;
 	}
 	was_endl = buf->buffer[buf->pos] == '\n' ? 1 : 0;
 	buf->pos += was_endl;
-
-
-
 	if (was_endl || (buf->pos - was_endl == buf->len && buf->len < buf->capacity))
 		return (ENDL_GOT);
-
 	return (ENDL_NOT_FOUND);
-
 }
 
 
@@ -164,21 +170,21 @@ t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
 {
 	t_result res;
 
-	printf(RED "SUKA\n");
+	///printf(RED "SUKA\n");
 	res = ENDL_NOT_FOUND;
 	/*if ((size_t)buf->len != buf->capacity)
 		return ENDL_GOT;*/
 	while (res == ENDL_NOT_FOUND)
 	{
-		//printf("PIDRILNIK\n");
+		///printf("PIDRILNIK\n");
 		buf->len = read(fd, buf->buffer, BUFF_SIZE);
 		buf->pos = 0;
-		res = ft_get_line_from_buffer(buf, str, fd);
+		res = ft_get_line_from_buffer(buf, &str, fd);
 		if (res == MALLOC_ERROR || res == NO_LINE)
 			return (res);
 	}
-	printf(BLUE "[%s]\n", str->data);
-	printf(WHITE);
+	///printf(BLUE "[%s]\n", str->data);
+	///printf(WHITE);
 	return (ENDL_GOT);
 }
 
@@ -191,15 +197,18 @@ void ft_free_buf(void *buf)
 int		get_next_line(const int fd, char **line)
 {
 	printf(BLUE "PASKUDA\n");
+	printf(WHITE);
 	static t_map *fd_buf = 0;
 	t_result res = ENDL_NOT_FOUND;
 	t_buf **curr_buf;
 	t_v_string *str;
 
+	str = 0;
+
 	if (fd < 0)
 		return (-1);
 
-	if(fd_buf == 0)
+	if (fd_buf == 0)
 		fd_buf = ft_make_custom_value_map(INT32_T, ft_free_buf);
 	curr_buf = (t_buf**)ft_map_get(fd_buf, (void*)(size_t)fd);
 	if (*(void**)curr_buf == fd_buf->nil)
@@ -211,43 +220,46 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 	}
 
-	printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
-	printf(WHITE);
-	if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR
-		return (0);
+	///printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
+	///printf(WHITE);
+	///if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR +
+	///	return (0);
 	//if ((*curr_buf)->len == 0)
 	//	res = NO_LINE;
 
 
-	printf(YELLOW "%d\n", res);
+	///printf(YELLOW "%d\n", res);
 
-	str = ft_make_v_string(0);			// TODO do it only if needed  move to get_line_from_buf(?)
-	res = ft_get_line_from_buffer(*curr_buf, str, fd); // TODO delay vector v g_l_f esli !ne stroka i zbs
-	printf(GREEN "<%s>%d\n", str->data, res);
-	printf(WHITE);
+	///str = ft_make_v_string(0);			// TODO do it only if needed  move to get_line_from_buf(?) +
+	///res = ft_get_line_from_buffer(*curr_buf, &str, fd); // TODO delay vector v g_l_f esli !ne stroka i zbs +
+	///printf(GREEN "<%s>%d\n", str->data, res);
+	///printf(WHITE);
 
+	res = ft_get_line_from_buffer(*curr_buf, &str, fd);
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, str);
 	if (res == MALLOC_ERROR)
 		return (-1);
-	//printf(GREEN "<%s>\n", str->data);
-	//printf(WHITE);
+	///printf(GREEN "<%s>\n", str->data);
+	///printf(WHITE);
 
-
-	ft_v_string_fit(str);
-	*line = str->data;
+	ft_v_string_fit(str); // TODO protect this shit
+	*line = str == 0 ? 0 : str->data;
 	free(str);
-
-
-	if (res == NO_LINE)
+	if (res == NO_LINE || res == READ_ERROR)
 	{
-		ft_map_del(fd_buf, (void*)(size_t)fd);
-		ft_free_map(&fd_buf);
-		return (0);
+		//ft_map_del(fd_buf, (void*)(size_t)fd);
+		//ft_free_map(&fd_buf);
+		return (res == NO_LINE ? 0 : -1);
 	}
 
-	printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
-	printf(WHITE);
+	/*printf("SURPRISE MUTHERFUCKER! %p\n", str);
+	ft_v_string_fit(str);
+	*line = str->data;
+	free(str);*/
+
+	///printf(RED "<%s> %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos);
+	///printf(WHITE);
 
 	/*if (res == ENDL_GOT || res == NO_LINE)
 	{

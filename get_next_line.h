@@ -1,7 +1,9 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 2
+# define BUFF_SIZE 1
+
+# define INIT_VECT_SIZE 0
 
 #include<string.h>
 #include<unistd.h>
@@ -16,11 +18,11 @@ typedef struct
 }			t_buf;
 
 typedef enum {
-	MALLOC_ERROR,
 	NO_LINE,
-	ENDL_NOT_FOUND,
 	ENDL_GOT,
-	JUST_INITIALIZED = -777
+	MALLOC_ERROR,
+	ENDL_NOT_FOUND,
+	READ_ERROR
 } t_result;
 
 typedef struct	s_v_string
