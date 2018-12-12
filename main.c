@@ -433,7 +433,7 @@ int		main(void)
 	while (ret > 0)
 	{
 		ret = 0;
-		/*///printf("PASKUDA1\n");
+		///printf("PASKUDA1\n");
 		ret1 = get_next_line(fd11, &line);
 		if (c != 0 && ret1 != 0)
 			ft_strlcat(f1, "\n", 1000);
@@ -471,7 +471,7 @@ int		main(void)
 			ft_strlcat(f5, "\n", 1000);
 		if (ret5 != 0)
 			ft_strlcat(f5, line, 1000);
-		free(line);*/
+		free(line);
 
 
 		///printf("PASKUDA2.1\n");
@@ -510,8 +510,8 @@ int		main(void)
 
 		c++;
 	}
-	///printf("%s%s%s%s%s\n", f1, f2, f3, f4, f5);
-	//printf("%s\n%s\n%s\n%s\n", f21, f22, f23, f24);
+	printf("%s%s%s%s%s\n\n", f1, f2, f3, f4, f5);
+	printf("%s\n%s\n%s\n%s\n", f21, f22, f23, f24);
 	free(f1);
 	free(f2);
 	free(f3);

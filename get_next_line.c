@@ -14,7 +14,7 @@ void ft_print_v_string(t_v_string *str)
 
 	if (!str)
 	{
-		ft_putstr("NO V_STRING");
+		ft_putstr("NO V_STRING\n");
 		return ;
 	}
 	i = 0;
@@ -23,7 +23,7 @@ void ft_print_v_string(t_v_string *str)
 		ft_putchar(str->data[i]);
 		i++;
 	}
-	//ft_putchar('\n'); // TODO verni, suka
+	ft_putchar('\n'); // TODO verni, suka
 }
 
 t_v_string *ft_make_v_string(size_t init_size)
@@ -222,6 +222,11 @@ int		get_next_line(const int fd, char **line)
 
 	str = 0;
 
+	if (fd == 42)
+	{
+		printf(RED "SUKA PASKUDA BLYAAAAAAT\n");
+	}
+
 	if (fd < 0 || !line)
 		return (-1);
 
@@ -231,13 +236,24 @@ int		get_next_line(const int fd, char **line)
 	if (*(void**)curr_buf == fd_buf->nil)
 	{
 		if (!(*curr_buf = (t_buf*)malloc(sizeof(t_buf))))
+		{
+			ft_map_del(fd_buf, (void*)(size_t)fd);
+			if (fd_buf->size == 0)
+				ft_free_map(&fd_buf);
 			return (-1);
+		}
 		**curr_buf = (t_buf){(char*)malloc(BUFF_SIZE), BUFF_SIZE, 0, 0};
 		if (!(*curr_buf)->buffer || ((*curr_buf)->len = read(fd, (*curr_buf)->buffer, BUFF_SIZE)) == -1)
+		{
+			ft_map_del(fd_buf, (void*)(size_t)fd);
+			if (fd_buf->size == 0)
+				ft_free_map(&fd_buf);
 			return (-1);
+		}
+
 	}
 
-	///printf(RED "<%s> %zu %zu %zu\n", (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos, (*curr_buf)->capacity);
+	///printf(RED "fd:%d <%s> %zi %zi %zi\n", fd, (*curr_buf)->buffer, (*curr_buf)->len, (*curr_buf)->pos, (*curr_buf)->capacity);
 	///printf(WHITE);
 
 	///if ((*curr_buf)->len == 0)  //TODO move to get_line_from_buf use NO_LINE + ADD READ_ERROR +
@@ -272,7 +288,6 @@ int		get_next_line(const int fd, char **line)
 	ft_v_string_fit(str); // TODO protect this shit
 	*line = str == 0 ? 0 : str->data;
 	free(str);
-	printf("<%s>\n", *line);
 	if (res == NO_LINE)
 	{
 		///printf(YELLOW "FUCKING FUCK %d\n", res);

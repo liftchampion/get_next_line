@@ -98,18 +98,18 @@ void			**rb_tree_insert_data(t_map *map, void *key)
 	{
 		map->root = rb_tree_create_node(key, 0, 0, map);
 		map->root->color = RB_BLACK;
-		return (&map->root->value);
+		return (&(map->root->value));
 	}
 	current_node = map->root;
 	while (current_node != map->nil)
 	{
 		cmp_res = map->info->cmp_f(key, current_node->key);
 		if (!cmp_res)
-			return (&current_node->value);
+			return (&(current_node->value));
 		parent = current_node;
 		current_node = cmp_res < 0 ? current_node->left : current_node->right;
 	}
 	current_node = rb_tree_create_node(key, parent, cmp_res < 0, map);
 	rb_tree_balance_insert(current_node, map);
-	return (&current_node->value);
+	return (&(current_node->value));
 }
