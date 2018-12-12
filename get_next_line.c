@@ -243,6 +243,8 @@ int		get_next_line(const int fd, char **line)
 		res = ERROR;
 	if (res != ERROR)
 		*line = str == 0 ? 0 : str->data;
+	else
+		*line = 0;
 	free(str);
 	if (res == NO_LINE || res == ERROR)
 	{

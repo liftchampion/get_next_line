@@ -12,23 +12,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fd78a4f-b258-44e0-8e16-f1a2838f73d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.Makefile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/get_next_line.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/get_next_line.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/getNextLine.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/getNextLine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/getNextLine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.o" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_map/rb_tree_insert.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_map/rb_tree_insert.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.dSYM/Contents/Resources/DWARF/main" beforeDir="false" afterPath="$PROJECT_DIR$/main.dSYM/Contents/Resources/DWARF/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/01_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/01_test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/01_test.txt.my" beforeDir="false" afterPath="$PROJECT_DIR$/tests/01_test.txt.my" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/01_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/01_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/01_test.txt.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/02_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/02_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/02_test.txt.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/03_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/03_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/03_test.txt.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/04_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/04_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/04_test.txt.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/05_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/05_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/05_test.txt.my" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/06_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/06_test.txt.diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/06_test.txt.my" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +53,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_next_line.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1792">
-              <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+            <state relative-caret-position="3327">
+              <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -52,48 +65,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="357" column="25" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
+            <state relative-caret-position="681">
+              <caret line="825" column="1" lean-forward="true" selection-start-line="825" selection-start-column="1" selection-end-line="825" selection-end-column="1" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#1065#1084#0" expanded="true" />
-                <element signature="e#1254#2569#0" />
-                <element signature="e#2571#3862#0" />
-                <element signature="e#3864#5129#0" />
-                <element signature="e#5131#6449#0" />
-                <element signature="e#6451#8078#0" />
-                <element signature="e#8080#9452#0" />
+                <element signature="e#1254#2676#0" />
+                <element signature="e#15644#15667#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libft/ft_map/ft_map_works.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1442">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
@@ -101,17 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_next_line.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file24">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="66">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -121,6 +94,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file12">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file13">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -175,13 +166,13 @@
         <option value="$PROJECT_DIR$/file23" />
         <option value="$PROJECT_DIR$/file24" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/get_next_line.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libft/ft_map/ft_map_works.c" />
         <option value="$PROJECT_DIR$/libft/ft_map/rb_tree_insert.c" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c" />
         <option value="$PROJECT_DIR$/get_next_line.c" />
+        <option value="$PROJECT_DIR$/get_next_line.h" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -196,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,6 +198,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,28 +273,33 @@
       <workItem from="1544626703345" duration="66000" />
       <workItem from="1544626871510" duration="833000" />
       <workItem from="1544630001742" duration="6307000" />
-      <workItem from="1544637162806" duration="3915000" />
+      <workItem from="1544637162806" duration="5557000" />
+      <workItem from="1544643521461" duration="79000" />
+      <workItem from="1544643745122" duration="92000" />
+      <workItem from="1544645880028" duration="434000" />
+      <workItem from="1544646660102" duration="3022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131591000" />
+    <option name="totallyTimeSpent" value="136860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="773" y="0" width="1787" height="1440" extended-state="0" />
+    <frame x="790" y="0" width="1770" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18624642" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19965278" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38540146" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3051095" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35182482" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3591241" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.329927" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.329927" />
@@ -454,29 +450,8 @@
     <entry file="file://$PROJECT_DIR$/tests/05_test.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/file1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strlcat.c">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file12">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file13">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file21">
       <provider selected="true" editor-type-id="text-editor">
@@ -509,6 +484,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_insert_assist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1873" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_insert.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="101" column="37" lean-forward="true" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_strlen.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_map/ft_map_works.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/file24">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -516,10 +531,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file11">
+    <entry file="file://$PROJECT_DIR$/get_next_line.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="3327">
+          <caret line="246" column="18" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -533,69 +558,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/file12">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_insert_assist.c">
+    <entry file="file://$PROJECT_DIR$/file13">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1873" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_insert.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="101" column="37" lean-forward="true" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        <state relative-caret-position="44">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_map/ft_map_works.c">
+    <entry file="file://$PROJECT_DIR$/file11">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1442">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="198">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_next_line.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="66">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="357" column="25" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
+        <state relative-caret-position="681">
+          <caret line="825" column="1" lean-forward="true" selection-start-line="825" selection-start-column="1" selection-end-line="825" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#1065#1084#0" expanded="true" />
-            <element signature="e#1254#2569#0" />
-            <element signature="e#2571#3862#0" />
-            <element signature="e#3864#5129#0" />
-            <element signature="e#5131#6449#0" />
-            <element signature="e#6451#8078#0" />
-            <element signature="e#8080#9452#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_map/rb_tree_delete.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_next_line.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1792">
-          <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1254#2676#0" />
+            <element signature="e#15644#15667#0" />
           </folding>
         </state>
       </provider>
