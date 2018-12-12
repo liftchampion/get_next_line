@@ -1,131 +1,25 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shapka                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggerardy <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/26 17:25:22 by ggerardy          #+#    #+#             */
+/*   Updated: 2018/11/29 16:09:36 by ggerardy         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
 #include "libft.h"
-
 #include "get_next_line.h"
 
-
-/**void ft_print_string(t_string *str)
-{
-	size_t i;
-
-	if (!str)
-	{
-		ft_putstr("NO V_STRING\n");
-		return ;
-	}
-	i = 0;
-	while (i < str->len)
-	{
-		ft_putchar(str->data[i]);
-		i++;
-	}
-	ft_putchar('\n');
-}
-
-t_string *ft_make_string(size_t init_size)
-{
-	t_string *str = (t_string*)malloc(sizeof(t_string) * 1);
-	if (!str)
-		return (0);
-	str->capacity = init_size <= 1 ? 2 : init_size;
-	str->data = (char*)malloc(sizeof(char) * (str->capacity));
-	if (!str->data)
-	{
-		free(str);
-		return (0);
-	}
-	str->data[0] = '\0';
-	str->len = 0;
-	return (str);
-}*/
-
-/**void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
-{
-	void *new_data;
-	size_t i;
-
-	if (!old_data)
-		return (0);
-	new_data = ft_memalloc(new_size);
-	if (!new_data)
-	{
-		free(old_data);
-		return (0);
-	}
-	i = 0;
-	while (i < prev_size && i < new_size)
-	{
-		((char*)new_data)[i] = ((char*)old_data)[i];
-		++i;
-	}
-	free(old_data);
-	return (new_data);
-}*/
-
-/**void ft_free_string(t_string **str)
-{
-	if (!str || !*str)
-		return ;
-	free((*str)->data);
-	free(*str);
-	*str = 0;
-}
-
-t_int8 ft_string_push_back(t_string **str_ptr, char c)
-{
-	t_string *str;
-
-	if (!str_ptr || !*str_ptr)
-		return (-1);
-	str = *str_ptr;
-	if (str->len == str->capacity - 1)
-	{
-		str->data = ft_realloc(str->data, str->capacity, str->capacity * 2);
-		if (!str->data)
-		{
-			ft_free_string(str_ptr);
-			return (0);
-		}
-		str->capacity *= 2;
-	}
-	str->data[str->len++] = c;
-	str->data[str->len] = 0;
-	return (1);
-}
-
-
-t_int8 ft_string_fit(t_string **str_ptr)
-{
-	t_string *str;
-
-	if (!str_ptr || !*str_ptr)
-		return (-1);
-	str = *str_ptr;
-	if (str->len == str->capacity - 1)
-		return (1);
-	str->data = ft_realloc(str->data, str->capacity,   //TODO test -1
-										str->len == 0 ? 2 : str->len + 1);
-	if (!str->data)
-	{
-		ft_free_string(str_ptr);
-		return (0);
-	}
-	str->data[str->len] = 0;
-	str->capacity = str->len == 0 ? 2 : str->len + 1;
-	return (1);
-}*/
-
-
-
-
-t_result ft_get_line_from_buffer(t_buf *buf, t_string **str, int fd)
+t_result		ft_get_line_from_buffer(t_buf *buf, t_string **str, int fd)
 {
 	int was_endl;
 
-	if (buf->pos >= buf->len && buf->len == buf->capacity)
+	if (buf->pos >= buf->len && buf->len == buf->capac)
 	{
 		buf->len = read(fd, buf->buffer, BUFF_SIZE);
 		buf->pos = 0;
@@ -145,18 +39,15 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_string **str, int fd)
 	}
 	was_endl = (buf->pos < buf->len && buf->buffer[buf->pos] == '\n') ? 1 : 0;
 	buf->pos += was_endl;
-	if (was_endl || (buf->pos - was_endl == buf->len && buf->len < buf->capacity))
+	if (was_endl || (buf->pos - was_endl == buf->len && buf->len < buf->capac))
 		return (ENDL_GOT);
 	return (ENDL_NOT_FOUND);
 }
 
-
-t_result ft_append_line(t_buf *buf, int fd, t_string *str)
+t_result		ft_append_line(t_buf *buf, int fd, t_string *str)
 {
 	t_result res;
 
-	//if (res != ENDL_NOT_FOUND) // TODO na krainyak
-	//	return (res);
 	res = ENDL_NOT_FOUND;
 	while (res == ENDL_NOT_FOUND)
 	{
@@ -169,13 +60,13 @@ t_result ft_append_line(t_buf *buf, int fd, t_string *str)
 	return (ENDL_GOT);
 }
 
-void ft_free_buf(void *buf)
+void			ft_free_buf(void *buf)
 {
 	free(((t_buf*)buf)->buffer);
 	free(buf);
 }
 
-t_result ft_gnl_init_works(int fd, t_map **fd_bf, t_buf ***curr_buf)
+t_result		ft_gnl_init_works(int fd, t_map **fd_bf, t_buf ***curr_buf)
 {
 	t_result res;
 
@@ -201,12 +92,12 @@ t_result ft_gnl_init_works(int fd, t_map **fd_bf, t_buf ***curr_buf)
 	return (res);
 }
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
-	static t_map *fd_bf = 0;
-	t_result res;
-	t_buf **curr_buf;
-	t_string *str;
+	static t_map	*fd_bf = 0;
+	t_result		res;
+	t_buf			**curr_buf;
+	t_string		*str;
 
 	str = 0;
 	res = !line ? ERROR : ft_gnl_init_works(fd, &fd_bf, &curr_buf);
@@ -218,7 +109,7 @@ int		get_next_line(const int fd, char **line)
 		res = ERROR;
 	if (res != ERROR)
 		*line = str == 0 ? 0 : str->data;
-	else
+	else if (line)
 		*line = 0;
 	free(str);
 	if (res == NO_LINE || res == ERROR)

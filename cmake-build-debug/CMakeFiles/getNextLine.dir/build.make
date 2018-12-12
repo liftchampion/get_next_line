@@ -590,9 +590,22 @@ CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/libft/ft_putstr_u_fd.c -o CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.s
 
+CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o: CMakeFiles/getNextLine.dir/flags.make
+CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o: ../libft/ft_realloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_realloc.c
+
+CMakeFiles/getNextLine.dir/libft/ft_realloc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/getNextLine.dir/libft/ft_realloc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggerardy/CLION/getNextLine/libft/ft_realloc.c > CMakeFiles/getNextLine.dir/libft/ft_realloc.c.i
+
+CMakeFiles/getNextLine.dir/libft/ft_realloc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/libft/ft_realloc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/libft/ft_realloc.c -o CMakeFiles/getNextLine.dir/libft/ft_realloc.c.s
+
 CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o: ../libft/ft_split_charset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_split_charset.c
 
 CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.i: cmake_force
@@ -605,7 +618,7 @@ CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strcat.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strcat.c.i: cmake_force
@@ -618,7 +631,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strcat.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strchr.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strchr.c.i: cmake_force
@@ -631,7 +644,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strchr.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strclr.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strclr.c.o: ../libft/ft_strclr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strclr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strclr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strclr.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strclr.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strclr.c.i: cmake_force
@@ -644,7 +657,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strclr.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.o: ../libft/ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strcmp.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.i: cmake_force
@@ -657,7 +670,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strcmp.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.o: ../libft/ft_strcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strcpy.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.i: cmake_force
@@ -670,7 +683,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strcpy.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strdel.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strdel.c.i: cmake_force
@@ -683,7 +696,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strdel.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strdup.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strdup.c.i: cmake_force
@@ -696,7 +709,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strdup.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o: ../libft/ft_strequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strequ.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strequ.c.i: cmake_force
@@ -709,7 +722,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strequ.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_striter.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/getNextLine.dir/libft/ft_striter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/getNextLine.dir/libft/ft_striter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_striter.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_striter.c
 
 CMakeFiles/getNextLine.dir/libft/ft_striter.c.i: cmake_force
@@ -722,7 +735,7 @@ CMakeFiles/getNextLine.dir/libft/ft_striter.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o: ../libft/ft_striteri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_striteri.c
 
 CMakeFiles/getNextLine.dir/libft/ft_striteri.c.i: cmake_force
@@ -735,7 +748,7 @@ CMakeFiles/getNextLine.dir/libft/ft_striteri.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strjoin.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.i: cmake_force
@@ -748,7 +761,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strlcat.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.i: cmake_force
@@ -761,7 +774,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strlcat.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.o: ../libft/ft_strlcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strlcpy.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.i: cmake_force
@@ -774,7 +787,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strlcpy.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strlen.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strlen.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strlen.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strlen.c.i: cmake_force
@@ -787,7 +800,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strlen.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strmap.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strmap.c.o: ../libft/ft_strmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strmap.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strmap.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strmap.c.i: cmake_force
@@ -800,7 +813,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strmap.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.o: ../libft/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strmapi.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.i: cmake_force
@@ -813,7 +826,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strmapi.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strncat.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strncat.c.o: ../libft/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strncat.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strncat.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strncat.c.i: cmake_force
@@ -826,7 +839,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strncat.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.o: ../libft/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strncmp.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.i: cmake_force
@@ -839,7 +852,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strncmp.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.o: ../libft/ft_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strncpy.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.i: cmake_force
@@ -852,7 +865,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strncpy.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.o: ../libft/ft_strnequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strnequ.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.i: cmake_force
@@ -865,7 +878,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strnequ.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strnew.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strnew.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strnew.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strnew.c.i: cmake_force
@@ -878,7 +891,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strnew.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strnstr.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.i: cmake_force
@@ -891,7 +904,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strnstr.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strrchr.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.i: cmake_force
@@ -904,7 +917,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strrchr.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strrev.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strrev.c.o: ../libft/ft_strrev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strrev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strrev.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strrev.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strrev.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strrev.c.i: cmake_force
@@ -917,7 +930,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strrev.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strset.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strset.c.o: ../libft/ft_strset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strset.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strset.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strset.c.i: cmake_force
@@ -930,7 +943,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strset.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.o: ../libft/ft_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strsplit.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.i: cmake_force
@@ -943,7 +956,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strsplit.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strstr.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strstr.c.o: ../libft/ft_strstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strstr.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strstr.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strstr.c.i: cmake_force
@@ -956,7 +969,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strstr.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strsub.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strsub.c.o: ../libft/ft_strsub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strsub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strsub.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strsub.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strsub.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strsub.c.i: cmake_force
@@ -969,7 +982,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strsub.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.o: ../libft/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_strtrim.c
 
 CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.i: cmake_force
@@ -982,7 +995,7 @@ CMakeFiles/getNextLine.dir/libft/ft_strtrim.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_tolower.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/getNextLine.dir/libft/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/getNextLine.dir/libft/ft_tolower.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_tolower.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_tolower.c
 
 CMakeFiles/getNextLine.dir/libft/ft_tolower.c.i: cmake_force
@@ -995,7 +1008,7 @@ CMakeFiles/getNextLine.dir/libft/ft_tolower.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_toupper.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/getNextLine.dir/libft/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/getNextLine.dir/libft/ft_toupper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_toupper.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_toupper.c
 
 CMakeFiles/getNextLine.dir/libft/ft_toupper.c.i: cmake_force
@@ -1008,7 +1021,7 @@ CMakeFiles/getNextLine.dir/libft/ft_toupper.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.o: ../libft/ft_map/ft_char_cmp_funcs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_char_cmp_funcs.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.i: cmake_force
@@ -1021,7 +1034,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_char_cmp_funcs.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.o: ../libft/ft_map/ft_get_cmp_func.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_get_cmp_func.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.i: cmake_force
@@ -1034,7 +1047,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_cmp_func.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.o: ../libft/ft_map/ft_get_free_func.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_get_free_func.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.i: cmake_force
@@ -1047,7 +1060,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_get_free_func.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.o: ../libft/ft_map/ft_map_works.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_map_works.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.i: cmake_force
@@ -1060,7 +1073,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_map_works.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.o: ../libft/ft_map/ft_s_int_cmp_funcs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_s_int_cmp_funcs.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.i: cmake_force
@@ -1073,7 +1086,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_s_int_cmp_funcs.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.o: ../libft/ft_map/ft_u_int_cmp_funcs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_u_int_cmp_funcs.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.i: cmake_force
@@ -1086,7 +1099,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/ft_u_int_cmp_funcs.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.o: ../libft/ft_map/rb_tree_assists.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_assists.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.i: cmake_force
@@ -1099,7 +1112,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_assists.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o: ../libft/ft_map/rb_tree_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_delete.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.i: cmake_force
@@ -1112,7 +1125,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o: ../libft/ft_map/rb_tree_delete_assist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_delete_assist.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.i: cmake_force
@@ -1125,7 +1138,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o: ../libft/ft_map/rb_tree_insert.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_insert.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.i: cmake_force
@@ -1138,7 +1151,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o: ../libft/ft_map/rb_tree_insert_assist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_insert_assist.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.i: cmake_force
@@ -1151,7 +1164,7 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.s: cmake_force
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o: CMakeFiles/getNextLine.dir/flags.make
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o: ../libft/ft_map/rb_tree_merge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_merge.c
 
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.i: cmake_force
@@ -1161,6 +1174,19 @@ CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.i: cmake_force
 CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_merge.c -o CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.s
+
+CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o: CMakeFiles/getNextLine.dir/flags.make
+CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o: ../libft/ft_string/ft_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o   -c /Users/ggerardy/CLION/getNextLine/libft/ft_string/ft_string.c
+
+CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ggerardy/CLION/getNextLine/libft/ft_string/ft_string.c > CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.i
+
+CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ggerardy/CLION/getNextLine/libft/ft_string/ft_string.c -o CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.s
 
 # Object files for target getNextLine
 getNextLine_OBJECTS = \
@@ -1205,6 +1231,7 @@ getNextLine_OBJECTS = \
 "CMakeFiles/getNextLine.dir/libft/ft_putstr_fd.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_putstr_u.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.o" \
+"CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o" \
@@ -1248,7 +1275,8 @@ getNextLine_OBJECTS = \
 "CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o" \
 "CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o" \
-"CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o"
+"CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o" \
+"CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o"
 
 # External object files for target getNextLine
 getNextLine_EXTERNAL_OBJECTS =
@@ -1294,6 +1322,7 @@ getNextLine: CMakeFiles/getNextLine.dir/libft/ft_putstr.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_putstr_fd.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_putstr_u.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.o
+getNextLine: CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o
@@ -1338,9 +1367,10 @@ getNextLine: CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_delete_assist.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_insert_assist.c.o
 getNextLine: CMakeFiles/getNextLine.dir/libft/ft_map/rb_tree_merge.c.o
+getNextLine: CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o
 getNextLine: CMakeFiles/getNextLine.dir/build.make
 getNextLine: CMakeFiles/getNextLine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Linking C executable getNextLine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Linking C executable getNextLine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/getNextLine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

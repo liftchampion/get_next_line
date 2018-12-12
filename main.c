@@ -861,8 +861,17 @@ int		main(void)
 {
 
 
-	diman_tests();
-	return (0);
+	//diman_tests();
+	//return (0);
+	//get_next_line(-99, NULL);
+
+	/*char *line = 0;
+	int ret = get_next_line(0, &line);
+	while (ret > 0)
+	{
+		printf("<%s> - %d\n", line, ret);
+		ret = get_next_line(0, &line);
+	}*/
 
 
 	return (0);

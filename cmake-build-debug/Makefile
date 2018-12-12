@@ -1527,6 +1527,33 @@ libft/ft_putstr_u_fd.c.s:
 	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.s
 .PHONY : libft/ft_putstr_u_fd.c.s
 
+libft/ft_realloc.o: libft/ft_realloc.c.o
+
+.PHONY : libft/ft_realloc.o
+
+# target to build an object file
+libft/ft_realloc.c.o:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o
+.PHONY : libft/ft_realloc.c.o
+
+libft/ft_realloc.i: libft/ft_realloc.c.i
+
+.PHONY : libft/ft_realloc.i
+
+# target to preprocess a source file
+libft/ft_realloc.c.i:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_realloc.c.i
+.PHONY : libft/ft_realloc.c.i
+
+libft/ft_realloc.s: libft/ft_realloc.c.s
+
+.PHONY : libft/ft_realloc.s
+
+# target to generate assembly for a file
+libft/ft_realloc.c.s:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_realloc.c.s
+.PHONY : libft/ft_realloc.c.s
+
 libft/ft_split_charset.o: libft/ft_split_charset.c.o
 
 .PHONY : libft/ft_split_charset.o
@@ -1769,6 +1796,33 @@ libft/ft_strequ.s: libft/ft_strequ.c.s
 libft/ft_strequ.c.s:
 	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_strequ.c.s
 .PHONY : libft/ft_strequ.c.s
+
+libft/ft_string/ft_string.o: libft/ft_string/ft_string.c.o
+
+.PHONY : libft/ft_string/ft_string.o
+
+# target to build an object file
+libft/ft_string/ft_string.c.o:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o
+.PHONY : libft/ft_string/ft_string.c.o
+
+libft/ft_string/ft_string.i: libft/ft_string/ft_string.c.i
+
+.PHONY : libft/ft_string/ft_string.i
+
+# target to preprocess a source file
+libft/ft_string/ft_string.c.i:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.i
+.PHONY : libft/ft_string/ft_string.c.i
+
+libft/ft_string/ft_string.s: libft/ft_string/ft_string.c.s
+
+.PHONY : libft/ft_string/ft_string.s
+
+# target to generate assembly for a file
+libft/ft_string/ft_string.c.s:
+	$(MAKE) -f CMakeFiles/getNextLine.dir/build.make CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.s
+.PHONY : libft/ft_string/ft_string.c.s
 
 libft/ft_striter.o: libft/ft_striter.c.o
 
@@ -2583,6 +2637,9 @@ help:
 	@echo "... libft/ft_putstr_u_fd.o"
 	@echo "... libft/ft_putstr_u_fd.i"
 	@echo "... libft/ft_putstr_u_fd.s"
+	@echo "... libft/ft_realloc.o"
+	@echo "... libft/ft_realloc.i"
+	@echo "... libft/ft_realloc.s"
 	@echo "... libft/ft_split_charset.o"
 	@echo "... libft/ft_split_charset.i"
 	@echo "... libft/ft_split_charset.s"
@@ -2610,6 +2667,9 @@ help:
 	@echo "... libft/ft_strequ.o"
 	@echo "... libft/ft_strequ.i"
 	@echo "... libft/ft_strequ.s"
+	@echo "... libft/ft_string/ft_string.o"
+	@echo "... libft/ft_string/ft_string.i"
+	@echo "... libft/ft_string/ft_string.s"
 	@echo "... libft/ft_striter.o"
 	@echo "... libft/ft_striter.i"
 	@echo "... libft/ft_striter.s"

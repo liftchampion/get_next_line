@@ -56,6 +56,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_fd.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_putstr_fd.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_u.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_putstr_u.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_u_fd.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_putstr_u_fd.c.o"
+  "/Users/ggerardy/CLION/getNextLine/libft/ft_realloc.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_realloc.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_split_charset.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_split_charset.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strcat.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strcat.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strchr.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strchr.c.o"
@@ -65,6 +66,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strdel.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strdel.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strdup.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strdup.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strequ.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strequ.c.o"
+  "/Users/ggerardy/CLION/getNextLine/libft/ft_string/ft_string.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_string/ft_string.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_striter.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_striter.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_striteri.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_striteri.c.o"
   "/Users/ggerardy/CLION/getNextLine/libft/ft_strjoin.c" "/Users/ggerardy/CLION/getNextLine/cmake-build-debug/CMakeFiles/getNextLine.dir/libft/ft_strjoin.c.o"
@@ -94,6 +96,7 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  ".././libft/includes"
   )
 
 # Targets to which this target links.

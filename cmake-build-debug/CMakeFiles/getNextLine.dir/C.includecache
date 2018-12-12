@@ -6,31 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/Users/ggerardy/CLION/getNextLine/ft_map.h
+.././libft/includes/ft_map.h
 stdlib.h
 -
 libft.h
-/Users/ggerardy/CLION/getNextLine/libft.h
+.././libft/includes/libft.h
 ft_types.h
-/Users/ggerardy/CLION/getNextLine/ft_types.h
+.././libft/includes/ft_types.h
 
-/Users/ggerardy/CLION/getNextLine/ft_types.h
+.././libft/includes/ft_string.h
+stdlib.h
+-
+libft.h
+.././libft/includes/libft.h
+
+.././libft/includes/ft_types.h
 string.h
 -
 
-/Users/ggerardy/CLION/getNextLine/get_next_line.h
+.././libft/includes/libft.h
 string.h
+-
+ft_types.h
+.././libft/includes/ft_types.h
+ft_map.h
+.././libft/includes/ft_map.h
+ft_string.h
+.././libft/includes/ft_string.h
+
+/Users/ggerardy/CLION/getNextLine/get_next_line.c
+stdlib.h
 -
 unistd.h
 -
 libft.h
 /Users/ggerardy/CLION/getNextLine/libft.h
+get_next_line.h
+/Users/ggerardy/CLION/getNextLine/get_next_line.h
 
-/Users/ggerardy/CLION/getNextLine/libft.h
+/Users/ggerardy/CLION/getNextLine/get_next_line.h
 string.h
 -
-ft_map.h
-/Users/ggerardy/CLION/getNextLine/ft_map.h
+libft.h
+/Users/ggerardy/CLION/getNextLine/libft.h
 
 /Users/ggerardy/CLION/getNextLine/main.c
 get_next_line.h
