@@ -592,12 +592,12 @@ void	test12(void)
 	printf("TEST_12_MUL_FD ");
 
 	char *line = 0;
-	int k = 6;
-	while (k < 50)
+	int k = 8;
+	/*while (k < 50)
 	{
 		get_next_line(k, &line);
 		k++;
-	}
+	}*/
 
 	int fd11 = open("file11", O_RDONLY);
 	int fd12 = open("file12", O_RDONLY);

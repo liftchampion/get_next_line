@@ -8,7 +8,7 @@
 #include "get_next_line.h"
 
 
-void ft_print_v_string(t_v_string *str)
+void ft_print_string(t_string *str)
 {
 	size_t i;
 
@@ -23,12 +23,12 @@ void ft_print_v_string(t_v_string *str)
 		ft_putchar(str->data[i]);
 		i++;
 	}
-	ft_putchar('\n'); // TODO verni, suka
+	ft_putchar('\n');
 }
 
-t_v_string *ft_make_v_string(size_t init_size)
+t_string *ft_make_string(size_t init_size)
 {
-	t_v_string *str = (t_v_string*)malloc(sizeof(t_v_string) * 1);
+	t_string *str = (t_string*)malloc(sizeof(t_string) * 1);
 	if (!str)
 		return (0);
 	str->capacity = init_size <= 1 ? 2 : init_size;
@@ -66,7 +66,7 @@ void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
 	return (new_data);
 }
 
-void ft_v_string_free(t_v_string **str)
+void ft_free_string(t_string **str)
 {
 	if (!str || !*str)
 		return ;
@@ -75,9 +75,9 @@ void ft_v_string_free(t_v_string **str)
 	*str = 0;
 }
 
-t_int8 ft_v_string_push_back(t_v_string **str_ptr, char c)
+t_int8 ft_string_push_back(t_string **str_ptr, char c)
 {
-	t_v_string *str;
+	t_string *str;
 
 	if (!str_ptr || !*str_ptr)
 		return (-1);
@@ -87,7 +87,7 @@ t_int8 ft_v_string_push_back(t_v_string **str_ptr, char c)
 		str->data = ft_realloc(str->data, str->capacity, str->capacity * 2);
 		if (!str->data)
 		{
-			ft_v_string_free(str_ptr);
+			ft_free_string(str_ptr);
 			return (0);
 		}
 		str->capacity *= 2;
@@ -98,20 +98,20 @@ t_int8 ft_v_string_push_back(t_v_string **str_ptr, char c)
 }
 
 
-t_int8 ft_v_string_fit(t_v_string **str_ptr)
+t_int8 ft_string_fit(t_string **str_ptr)
 {
-	t_v_string *str;
+	t_string *str;
 
 	if (!str_ptr || !*str_ptr)
 		return (-1);
 	str = *str_ptr;
 	if (str->len == str->capacity - 1)
 		return (1);
-	str->data = ft_realloc(str->data, str->capacity, //(size_t)-1);   //TODO test -1
+	str->data = ft_realloc(str->data, str->capacity,   //TODO test -1
 										str->len == 0 ? 2 : str->len + 1);
 	if (!str->data)
 	{
-		ft_v_string_free(str_ptr);
+		ft_free_string(str_ptr);
 		return (0);
 	}
 	str->data[str->len] = 0;
@@ -145,7 +145,7 @@ t_int8 ft_v_string_fit(t_v_string **str_ptr)
 
 
 
-t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
+t_result ft_get_line_from_buffer(t_buf *buf, t_string **str, int fd)
 {
 	int was_endl;
 
@@ -159,11 +159,11 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 	else if (buf->pos >= buf->len)
 		return (*str == 0 ? NO_LINE : ENDL_GOT);
 	if (!*str)
-		if (!(*str = ft_make_v_string(INIT_VECT_SIZE)))
+		if (!(*str = ft_make_string(INIT_VECT_SIZE)))
 			return (ERROR);
 	while (buf->pos < buf->len && buf->buffer[buf->pos] != '\n')
 	{
-		if (!ft_v_string_push_back(str, buf->buffer[buf->pos]))
+		if (!ft_string_push_back(str, buf->buffer[buf->pos]))
 			return (ERROR);
 		buf->pos++;
 	}
@@ -175,7 +175,7 @@ t_result ft_get_line_from_buffer(t_buf *buf, t_v_string **str, int fd)
 }
 
 
-t_result ft_append_line(t_buf *buf, int fd, t_v_string *str)
+t_result ft_append_line(t_buf *buf, int fd, t_string *str)
 {
 	t_result res;
 
@@ -230,16 +230,15 @@ int		get_next_line(const int fd, char **line)
 	static t_map *fd_bf = 0;
 	t_result res;
 	t_buf **curr_buf;
-	t_v_string *str;
+	t_string *str;
 
 	str = 0;
-	curr_buf = 0;
 	res = !line ? ERROR : ft_gnl_init_works(fd, &fd_bf, &curr_buf);
 	if (res != ERROR)
 		res = ft_get_line_from_buffer(*curr_buf, &str, fd);
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, str);
-	if (res == ERROR || !ft_v_string_fit(&str))
+	if (res == ERROR || !ft_string_fit(&str))
 		res = ERROR;
 	if (res != ERROR)
 		*line = str == 0 ? 0 : str->data;
@@ -250,9 +249,8 @@ int		get_next_line(const int fd, char **line)
 	{
 		ft_map_del(fd_bf, (void*)(size_t)fd);
 		if (fd_bf && fd_bf->size == 0)
-			ft_free_map(&fd_bf);
-		return (res);							// TODO be sure about errors
+			ft_free_map(&fd_bf);			// TODO be sure about errors
 	}
-	return (1);
+	return (res);
 }
 

@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/ggerardy/CLION/getNextLine/ft_debugger.h
-
 /Users/ggerardy/CLION/getNextLine/ft_map.h
 stdlib.h
 -
@@ -19,22 +17,6 @@ ft_types.h
 /Users/ggerardy/CLION/getNextLine/ft_types.h
 string.h
 -
-
-/Users/ggerardy/CLION/getNextLine/get_next_line.c
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-fcntl.h
--
-libft.h
-/Users/ggerardy/CLION/getNextLine/libft.h
-ft_debugger.h
-/Users/ggerardy/CLION/getNextLine/ft_debugger.h
-get_next_line.h
-/Users/ggerardy/CLION/getNextLine/get_next_line.h
 
 /Users/ggerardy/CLION/getNextLine/get_next_line.h
 string.h
@@ -49,4 +31,24 @@ string.h
 -
 ft_map.h
 /Users/ggerardy/CLION/getNextLine/ft_map.h
+
+/Users/ggerardy/CLION/getNextLine/main.c
+get_next_line.h
+/Users/ggerardy/CLION/getNextLine/get_next_line.h
+stdio.h
+-
+fcntl.h
+-
+unistd.h
+-
+stdlib.h
+-
+libft.h
+/Users/ggerardy/CLION/getNextLine/libft.h
+stdlib.h
+-
+get_next_line.h
+/Users/ggerardy/CLION/getNextLine/get_next_line.h
+stdio.h
+-
 
