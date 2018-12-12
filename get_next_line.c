@@ -8,7 +8,7 @@
 #include "get_next_line.h"
 
 
-void ft_print_string(t_string *str)
+/**void ft_print_string(t_string *str)
 {
 	size_t i;
 
@@ -41,9 +41,9 @@ t_string *ft_make_string(size_t init_size)
 	str->data[0] = '\0';
 	str->len = 0;
 	return (str);
-}
+}*/
 
-void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
+/**void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
 {
 	void *new_data;
 	size_t i;
@@ -64,9 +64,9 @@ void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
 	}
 	free(old_data);
 	return (new_data);
-}
+}*/
 
-void ft_free_string(t_string **str)
+/**void ft_free_string(t_string **str)
 {
 	if (!str || !*str)
 		return ;
@@ -117,31 +117,8 @@ t_int8 ft_string_fit(t_string **str_ptr)
 	str->data[str->len] = 0;
 	str->capacity = str->len == 0 ? 2 : str->len + 1;
 	return (1);
-}
-
-
-
-
-/**ssize_t ft_readn(const int fd, t_buf *buf)
-{
-	ssize_t res_of_read;
-
-	res_of_read = read(fd, buf->buffer, buf->capacity);
-	if (res_of_read == -1)
-		return (-1);
-	buf->len = res_of_read;
-	buf->pos = 0;
-	while ((size_t)buf->len != buf->capacity)
-	{
-		res_of_read = read(fd, buf->buffer + buf->len, buf->capacity - buf->len);
-		if (res_of_read == -1)
-			return (-1);
-		buf->len += res_of_read;
-		if (res_of_read == 0)
-			break ;
-	}
-	return buf->len;
 }*/
+
 
 
 
@@ -249,8 +226,7 @@ int		get_next_line(const int fd, char **line)
 	{
 		ft_map_del(fd_bf, (void*)(size_t)fd);
 		if (fd_bf && fd_bf->size == 0)
-			ft_free_map(&fd_bf);			// TODO be sure about errors
+			ft_free_map(&fd_bf);
 	}
 	return (res);
 }
-
