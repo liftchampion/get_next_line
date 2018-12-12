@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shapka                                             :+:      :+:    :+:   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggerardy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 17:25:22 by ggerardy          #+#    #+#             */
-/*   Updated: 2018/12/10 12:54:02 by ggerardy         ###   ########.fr       */
+/*   Created: 2018/12/13 02:00:02 by ggerardy          #+#    #+#             */
+/*   Updated: 2018/12/13 02:00:31 by ggerardy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
-void *ft_realloc(void *old_data, size_t prev_size, size_t new_size)
+# include <stdlib.h>
+# include "libft.h"
+
+typedef struct	s_string
 {
-	void *new_data;
-	size_t i;
+	char		*data;
+	size_t		len;
+	size_t		capacity;
+}				t_string;
 
-	if (!old_data)
-		return (0);
-	new_data = ft_memalloc(new_size);
-	if (!new_data)
-	{
-		free(old_data);
-		return (0);
-	}
-	i = 0;
-	while (i < prev_size && i < new_size)
-	{
-		((char*)new_data)[i] = ((char*)old_data)[i];
-		++i;
-	}
-	free(old_data);
-	return (new_data);
-}
+void			ft_print_string(t_string *str);
+
+void			ft_free_string(t_string **str);
+
+t_int8			ft_string_fit(t_string **str);
+
+t_int8			ft_string_push_back(t_string **str, char c);
+
+t_string		*ft_make_string(size_t init_size);
+
+#endif

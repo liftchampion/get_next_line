@@ -579,6 +579,8 @@ void	test11(void)
 		}
 	}
 	printf("TEST_11_MUL_FD" RED " DIFFS [KO] :(\n" WHITE);
+	close(fd);
+	close(fd2);
 }
 
 void	test12(void)
@@ -592,12 +594,6 @@ void	test12(void)
 	printf("TEST_12_MUL_FD ");
 
 	char *line = 0;
-	int k = 8;
-	/*while (k < 50)
-	{
-		get_next_line(k, &line);
-		k++;
-	}*/
 
 	int fd11 = open("file11", O_RDONLY);
 	int fd12 = open("file12", O_RDONLY);
@@ -775,6 +771,16 @@ void	test12(void)
 	read(fd23, f23_ref, 1000);
 	read(fd24, f24_ref, 1000);
 
+	close(fd11);
+	close(fd12);
+	close(fd13);
+	close(fd14);
+	close(fd15);
+
+	close(fd21);
+	close(fd22);
+	close(fd23);
+	close(fd24);
 
 	int err_count = 0;
 
@@ -853,62 +859,10 @@ void	diman_tests()
 
 int		main(void)
 {
-	char *line;
-	int ret;
-	//line = (char*)malloc(1000000);
-	//for (int i = 0; i < 9; i++)
-	//{
-	//	line[i] = 'Z';
-	//}
-	//line[9] = 0;
 
 
 	diman_tests();
 	return (0);
-
-	get_next_line(5, &line);
-	return (0);
-
-	//int fd1 = open("asd", O_RDONLY);
-	//int fd1 = open("../../BitBucket/libft_main/main.c", O_RDONLY);
-	//int fd1 = open("main.o", O_RDONLY);
-	//int fd1 = open("test_cat", O_RDONLY);
-	//int fd1 = open("file1", O_RDONLY);
-	int fd1 = open("1.txt", O_RDONLY);
-	//int fd1 = open("one_big_fat_line.txt", O_RDONLY);
-	//int fd1 = open("noenld", O_RDONLY);
-	int fd2 = open("1.txt", O_RDONLY);
-	int fd3 = open("empty_strs", O_RDONLY);
-
-	ret = 2;
-	int c = 0;
-	/**while (ret && ret != -1)
-	{
-		//ret = get_next_line(fd2, &line);
-		//printf("\n%d->%d: <%s>", fd2, ret, line);
-		//ret = get_next_line(fd3, &line);
-		//printf("\n%d->%d: <%s>", fd3, ret, line);
-
-		//ft_putchar('<');
-		ret = get_next_line(fd1, &line);
-		if (ret == 0)
-			break ;
-		if (c != 0)
-			printf("\n");
-
-		///printf("{%p}\n", (void*)line);
-		printf("%s", line);
-		//ft_putstr(line);
-		//ft_putchar('>');
-		free(line);
-
-
-		//printf("<%s>", line);
-		//printf("\n%d->%d: <%s>", fd1, ret, line);
-		c++;
-	}*/
-
-
 
 
 	return (0);

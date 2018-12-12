@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "libft.h"
-#include "ft_debugger.h"
 
 #include "get_next_line.h"
 

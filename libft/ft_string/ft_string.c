@@ -6,7 +6,7 @@
 /*   By: ggerardy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:25:22 by ggerardy          #+#    #+#             */
-/*   Updated: 2018/12/10 12:54:02 by ggerardy         ###   ########.fr       */
+/*   Updated: 2018/12/13 02:05:38 by ggerardy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include "ft_string.h"
 
-void ft_print_string(t_string *str)
+void			ft_print_string(t_string *str)
 {
 	size_t i;
 
@@ -32,9 +32,11 @@ void ft_print_string(t_string *str)
 	ft_putchar('\n');
 }
 
-t_string *ft_make_string(size_t init_size)
+t_string		*ft_make_string(size_t init_size)
 {
-	t_string *str = (t_string*)malloc(sizeof(t_string) * 1);
+	t_string *str;
+
+	str = (t_string*)malloc(sizeof(t_string) * 1);
 	if (!str)
 		return (0);
 	str->capacity = init_size <= 1 ? 2 : init_size;
@@ -49,7 +51,7 @@ t_string *ft_make_string(size_t init_size)
 	return (str);
 }
 
-void ft_free_string(t_string **str)
+void			ft_free_string(t_string **str)
 {
 	if (!str || !*str)
 		return ;
@@ -58,7 +60,7 @@ void ft_free_string(t_string **str)
 	*str = 0;
 }
 
-t_int8 ft_string_push_back(t_string **str_ptr, char c)
+t_int8			ft_string_push_back(t_string **str_ptr, char c)
 {
 	t_string *str;
 
@@ -80,8 +82,7 @@ t_int8 ft_string_push_back(t_string **str_ptr, char c)
 	return (1);
 }
 
-
-t_int8 ft_string_fit(t_string **str_ptr)
+t_int8			ft_string_fit(t_string **str_ptr)
 {
 	t_string *str;
 
@@ -90,8 +91,8 @@ t_int8 ft_string_fit(t_string **str_ptr)
 	str = *str_ptr;
 	if (str->len == str->capacity - 1)
 		return (1);
-	str->data = ft_realloc(str->data, str->capacity,   //TODO test -1
-						   str->len == 0 ? 2 : str->len + 1);
+	str->data = ft_realloc(str->data, str->capacity,
+			str->len == 0 ? 2 : str->len + 1);
 	if (!str->data)
 	{
 		ft_free_string(str_ptr);
