@@ -352,7 +352,10 @@ int		main(void)
 	//line[9] = 0;
 
 
-	diman_tests();
+	///diman_tests();
+	///return (0);
+
+	get_next_line(-1, 0);
 	return (0);
 
 	//int fd1 = open("asd", O_RDONLY);

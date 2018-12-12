@@ -63,7 +63,7 @@ void			rb_tree_delete_key(t_map *map, void *key)
 	t_pair		color_n_node;
 	int			cmp_res;
 
-	if (!map->root)
+	if (!map || !map->root)
 		return ;
 	current_node = map->root;
 	while (current_node != map->nil)

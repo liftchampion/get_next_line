@@ -247,7 +247,7 @@ int		get_next_line(const int fd, char **line)
 	if (res == NO_LINE || res == ERROR)
 	{
 		ft_map_del(fd_bf, (void*)(size_t)fd);
-		if (fd_bf->size == 0)
+		if (fd_bf && fd_bf->size == 0)
 			ft_free_map(&fd_bf);
 		return (res);							// TODO be sure about errors
 	}
