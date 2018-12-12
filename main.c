@@ -352,8 +352,8 @@ int		main(void)
 	//line[9] = 0;
 
 
-	///diman_tests();
-	///return (0);
+	diman_tests();
+	return (0);
 
 	//int fd1 = open("asd", O_RDONLY);
 	//int fd1 = open("../../BitBucket/libft_main/main.c", O_RDONLY);
