@@ -86,6 +86,258 @@
 		<Unit filename="/Users/ggerardy/CLION/getNextLine/get_next_line.h">
 			<Option target="getNextLine"/>
 		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_atoi.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_bzero.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_free_matrix.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_is_in_charset.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isalnum.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isalpha.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isascii.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isdigit.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isprint.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_isspace.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_itoa.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstadd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstdel.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstdelone.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstiter.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstmap.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_lstnew.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_char_cmp_funcs.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_get_cmp_func.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_get_free_func.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_map_works.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_s_int_cmp_funcs.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/ft_u_int_cmp_funcs.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_assists.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_delete.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_delete_assist.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_insert.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_insert_assist.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_map/rb_tree_merge.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memalloc.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memccpy.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memchr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memcmp.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memcpy.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memdel.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memmove.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_memset.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_numlen.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_pow.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_print_words_table.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putchar.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putchar_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putchar_u_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putendl.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putendl_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putnbr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putnbr_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putstr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_u.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_putstr_u_fd.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_split_charset.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strcat.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strchr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strclr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strcmp.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strcpy.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strdel.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strdup.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strequ.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_striter.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_striteri.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strjoin.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strlcat.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strlcpy.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strlen.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strmap.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strmapi.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strncat.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strncmp.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strncpy.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strnequ.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strnew.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strnstr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strrchr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strrev.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strset.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strsplit.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strstr.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strsub.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_strtrim.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_tolower.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/libft/ft_toupper.c">
+			<Option target="getNextLine"/>
+		</Unit>
+		<Unit filename="/Users/ggerardy/CLION/getNextLine/main.c">
+			<Option target="getNextLine"/>
+		</Unit>
 		<Unit filename="/Users/ggerardy/CLION/getNextLine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

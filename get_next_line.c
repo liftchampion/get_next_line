@@ -199,6 +199,32 @@ void ft_free_buf(void *buf)
 	free(buf);
 }
 
+t_result ft_gnl_init_works(int fd, t_map **fd_bf, t_buf ***curr_buf)
+{
+	t_result res;
+
+	res = fd < 0 ? ERROR : ENDL_NOT_FOUND;
+	if (res == ERROR)
+		return (res);
+	if (!*fd_bf)
+		*fd_bf = ft_make_custom_value_map(INT32_T, ft_free_buf);
+	if (!*fd_bf)
+		return (ERROR);
+	*curr_buf = (t_buf**)ft_map_get(*fd_bf, (void*)(size_t)fd);
+	if (!*curr_buf)
+		return (ERROR);
+	if (**(void***)curr_buf == (*fd_bf)->nil)
+	{
+		if (!(**curr_buf = (t_buf*)malloc(sizeof(t_buf))))
+			return (ERROR);
+		***curr_buf = (t_buf){(char*)malloc(BUFF_SIZE), 0, 0, BUFF_SIZE};
+		if (!(**curr_buf)->buffer || ((**curr_buf)->len = read(fd,
+				(**curr_buf)->buffer, BUFF_SIZE)) == -1)
+			return (ERROR);
+	}
+	return (res);
+}
+
 int		get_next_line(const int fd, char **line)
 {
 	static t_map *fd_bf = 0;
@@ -207,27 +233,16 @@ int		get_next_line(const int fd, char **line)
 	t_v_string *str;
 
 	str = 0;
-	res = (fd < 0 || !line) ? ERROR : ENDL_NOT_FOUND;
-	if (fd_bf == 0 && res != ERROR)
-		fd_bf = ft_make_custom_value_map(INT32_T, ft_free_buf);
-	curr_buf = res == ERROR ? 0 : (t_buf**)ft_map_get(fd_bf, (void*)(size_t)fd);
-	if (res != ERROR && *(void**)curr_buf == fd_bf->nil)
-	{
-		if (!(*curr_buf = (t_buf*)malloc(sizeof(t_buf))))
-			res = ERROR;
-		if (res != ERROR)
-			**curr_buf = (t_buf){(char*)malloc(BUFF_SIZE), 0, 0, BUFF_SIZE};
-		if (res == ERROR || !(*curr_buf)->buffer || ((*curr_buf)->len = read(fd,
-				(*curr_buf)->buffer, BUFF_SIZE)) == -1)
-			res = ERROR;
-	}
+	curr_buf = 0;
+	res = !line ? ERROR : ft_gnl_init_works(fd, &fd_bf, &curr_buf);
 	if (res != ERROR)
 		res = ft_get_line_from_buffer(*curr_buf, &str, fd);
 	if (res == ENDL_NOT_FOUND)
 		res = ft_append_line(*curr_buf, fd, str);
 	if (res == ERROR || !ft_v_string_fit(&str))
 		res = ERROR;
-	*line = str == 0 ? 0 : str->data;
+	if (res != ERROR)
+		*line = str == 0 ? 0 : str->data;
 	free(str);
 	if (res == NO_LINE || res == ERROR)
 	{

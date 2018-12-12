@@ -96,7 +96,8 @@ void			**rb_tree_insert_data(t_map *map, void *key)
 
 	if (!map->root)
 	{
-		map->root = rb_tree_create_node(key, 0, 0, map);
+		if (!(map->root = rb_tree_create_node(key, 0, 0, map)))
+			return (0);
 		map->root->color = RB_BLACK;
 		return (&(map->root->value));
 	}
@@ -110,6 +111,8 @@ void			**rb_tree_insert_data(t_map *map, void *key)
 		current_node = cmp_res < 0 ? current_node->left : current_node->right;
 	}
 	current_node = rb_tree_create_node(key, parent, cmp_res < 0, map);
+	if (!current_node)
+		return (0);
 	rb_tree_balance_insert(current_node, map);
 	return (&(current_node->value));
 }
